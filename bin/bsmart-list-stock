@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+require 'nokogiri'
+require 'active_support'
+
+catalog_file = ARGV[0]
+
+catalog = Nokogiri::XML(File.read(catalog_file))
+catalog.css('catalog supplier').each do |supplier|
+  tab_counter = 0
+  puts 'Supplier:'
+  tab_counter += 1
+  puts "#{'  ' * tab_counter}Code: #{supplier['name'][0..3]}"
+  puts "#{'  ' * tab_counter}Name: #{supplier['name'][7..supplier['name'].length].strip}"
+  puts "#{'  ' * tab_counter}Products:"
+  supplier.xpath("product[Reference != '']").each do |product|
+    tab_counter += 1
+    puts "#{'  ' * tab_counter}Product:"
+    tab_counter += 1
+    product.children.each do |attribute|
+      unless attribute.name == "text"
+        if attribute.name == "Rsp"
+          val = "%0.2f" % attribute.text.to_f
+        else
+          val = attribute.text
+        end
+        puts "#{'  ' * tab_counter}#{attribute.name}: #{val}"
+      end
+    end
+    tab_counter -= 2
+  end
+end

@@ -1,12 +1,18 @@
-Feature: list stock information from a catalog
+Feature: bsmar-list-stock - list stock information from a catalog
 
   In order to paint a picture of the stock we have
   As a command line user
   I want to run the bsmart-list-stock command
   So that I can see a range of information describing a catalog
 
+  Scenario: run bsmart-list-stock with no arguments
+    When I run `bsmart-list-stock`
+    Then the output should contain:
+      """
+      """
+
   Scenario: show all stock info from catalog
-    Given I have an XML file named "catalog.xml" with:
+    Given a file named "catalog.xml" with:
       """
 <catalog>
   <supplier name="0001 - ACCURIST WATCHES ">
@@ -50,27 +56,10 @@ Feature: list stock information from a catalog
 </catalog>
       """
     When I run `bsmart-list-stock catalog.xml`
-    Then the output should contain:
-      """
-Supplier:
-code: 0001
-name: ACCURIST WATCHES
-Products:
-  Product:
-    Reference: GD1461
-    StockNum: 35-25-041
-    DiscReas:
-    Description: Gts9Y Accurist/WhtRN/Blt
-    Rsp: 1750.00
-    Cnc: 497.50
-    GM: 0065
-    OrdQty: 000000
-    Location: 000
-    CurrStk: 0000000
-    DepStk: 0000000
-    Qtr1: 00000
-    Qtr2: 00000
-    SoldYTD: 000000
-    SaleDate:
-    InvDate:
-      """
+    Then the output should contain "  Code: 0001"
+    And the output should contain "  Name: ACCURIST WATCHES"
+    And the output should contain "    Product:"
+    And the output should contain "      Reference: GD1461"
+    And the output should contain "      StockNum: 35-25-041"
+    And the output should contain "      Description: Gts9Y Accurist/WhtRN/Blt"
+    And the output should contain "      Rsp: 1750.00"
