@@ -2,16 +2,29 @@
 require 'nokogiri'
 require 'active_support'
 
+if ARGV.size == 0
+  puts "Usage: bsmart-list-stock catalog.xml [options]"
+  exit 0
+end
+
 catalog_file = ARGV[0]
 
 catalog = Nokogiri::XML(File.read(catalog_file))
-catalog.css('catalog supplier').each do |supplier|
+
+if ARGV[1] == '-s'
+  xpath = "/catalog/supplier[substring(@name, 1, 4)='#{ARGV[2]}']"
+else
+  xpath = "/catalog/supplier']"
+end
+
+catalog.xpath(xpath).each do |supplier|
   tab_counter = 0
   puts 'Supplier:'
   tab_counter += 1
   puts "#{'  ' * tab_counter}Code: #{supplier['name'][0..3]}"
   puts "#{'  ' * tab_counter}Name: #{supplier['name'][7..supplier['name'].length].strip}"
   puts "#{'  ' * tab_counter}Products:"
+
   supplier.xpath("product[Reference != '']").each do |product|
     tab_counter += 1
     puts "#{'  ' * tab_counter}Product:"

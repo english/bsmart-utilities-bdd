@@ -9,6 +9,7 @@ Feature: bsmar-list-stock - list stock information from a catalog
     When I run `bsmart-list-stock`
     Then the output should contain:
       """
+      Usage: bsmart-list-stock catalog.xml [options]
       """
 
   Scenario: show all stock info from catalog
@@ -63,3 +64,10 @@ Feature: bsmar-list-stock - list stock information from a catalog
     And the output should contain "      StockNum: 35-25-041"
     And the output should contain "      Description: Gts9Y Accurist/WhtRN/Blt"
     And the output should contain "      Rsp: 1750.00"
+
+  Scenario: Run bsmart-list-stock with -s argument
+    Given a full catalog.xml
+    When I run `bsmart-list-stock full-catalog.xml -s "0630"`
+    Then the output should contain "Name: Nomination"
+    And the output should contain "StockNum: 81-01-"
+    And the output should not contain "StockNum: 77-01-"
