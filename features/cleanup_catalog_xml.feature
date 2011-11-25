@@ -82,8 +82,9 @@ Feature: transform bsmart's catalog
     </StockSalesRec>                                        
 </StockSalesRpt>                                             
       """
-    When I run `bsmart-transform-xml DB1SC583.xml`
+    When I run `bsmart-transform-xml ../../assets/DB1SC583.xml catalog.xml`
     Then the exit status should be 0
+    And a file named "catalog.xml" should exist
     And the file "catalog.xml" should match
       """
 <?xml version="1.0" encoding="iso-8859-1"?>
@@ -128,3 +129,4 @@ Feature: transform bsmart's catalog
 </supplier>
 </catalog>
       """
+    And the contents of "catalog.xml" should be UTF-8
