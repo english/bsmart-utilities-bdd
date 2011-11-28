@@ -14,7 +14,7 @@ catalog = Nokogiri::XML(File.read(catalog_file))
 if ARGV[1] == '-s'
   xpath = "/catalog/supplier[substring(@name, 1, 4)='#{ARGV[2]}']"
 else
-  xpath = "/catalog/supplier']"
+  xpath = "/catalog/supplier"
 end
 
 catalog.xpath(xpath).each do |supplier|
