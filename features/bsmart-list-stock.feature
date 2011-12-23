@@ -1,4 +1,4 @@
-Feature: bsmar-list-stock - list stock information from a catalog
+Feature: bsmart-list-stock - list stock information from a catalog
 
   In order to paint a picture of the stock we have
   As a command line user

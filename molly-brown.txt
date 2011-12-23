@@ -1,0 +1,1772 @@
+Supplier:
+  Code: 0610
+  Name: Molly Brown Londo
+  Products:
+    Product:
+      Reference: MB08                    
+      StockNum: 84-01-001
+      DiscReas: 
+      Description: cross on pearls necklace 
+      Rsp: 72.00
+      Cnc: 000000030.00
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB09                    
+      StockNum: 84-01-002
+      DiscReas: 
+      Description: heart on pearls necklace 
+      Rsp: 72.00
+      Cnc: 000000030.00
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00001
+      SoldYTD:  000001
+      SaleDate:  1111   
+      InvDate:  1110   
+    Product:
+      Reference: MB10                    
+      StockNum: 84-02-001
+      DiscReas: 
+      Description: small molly brown blet   
+      Rsp: 55.00
+      Cnc: 000000022.95
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB102-1                 
+      StockNum: 84-01-023
+      DiscReas: 
+      Description: Lg LULU locket/chain     
+      Rsp: 60.00
+      Cnc: 000000025.00
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  0611   
+    Product:
+      Reference: MB102-2                 
+      StockNum: 84-01-024
+      DiscReas: 
+      Description: Lg LULU locket/chain     
+      Rsp: 62.00
+      Cnc: 000000025.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  1111   
+      InvDate:  0611   
+    Product:
+      Reference: MB106-1                 
+      StockNum: 84-02-015
+      DiscReas: 
+      Description: Festival Blet, D Pink    
+      Rsp: 32.00
+      Cnc: 000000013.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000003
+      SaleDate:  1111   
+      InvDate:  1111   
+    Product:
+      Reference: MB106-2                 
+      StockNum: 84-02-016
+      DiscReas: 
+      Description: Festival Blet, navy blue 
+      Rsp: 32.00
+      Cnc: 000000013.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000003
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000002
+      SaleDate:  0811   
+      InvDate:  1111   
+    Product:
+      Reference: MB106-6L                
+      StockNum: 84-02-018
+      DiscReas: 
+      Description: Festival ID blet, black  
+      Rsp: 32.00
+      Cnc: 000000013.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000004
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  1011   
+      InvDate:  1111   
+    Product:
+      Reference: MB123-1                 
+      StockNum: 84-02-017
+      DiscReas: 
+      Description: Festival ID blet, D pink 
+      Rsp: 55.00
+      Cnc: 000000022.95
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00002
+      Qtr2:  00000
+      SoldYTD:  000002
+      SaleDate:  0911   
+      InvDate:  1111   
+    Product:
+      Reference: MB132                   
+      StockNum: 84-01-027
+      DiscReas: 
+      Description: Silver chain 32"         
+      Rsp: 25.00
+      Cnc: 000000010.45
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0811   
+      InvDate:  0611   
+    Product:
+      Reference: MB133-1                 
+      StockNum: 84-01-025
+      DiscReas: 
+      Description: Small LULU locket/chain  
+      Rsp: 50.00
+      Cnc: 000000020.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  0611   
+    Product:
+      Reference: MB133-2                 
+      StockNum: 84-01-026
+      DiscReas: 
+      Description: Small LULU locket/chain  
+      Rsp: 52.00
+      Cnc: 000000021.70
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0711   
+      InvDate:  1111   
+    Product:
+      Reference: MB134                   
+      StockNum: 84-01-020
+      DiscReas: 
+      Description: Silver 14"-16" chain     
+      Rsp: 20.00
+      Cnc: 000000008.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000007
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0911   
+      InvDate:  0611   
+    Product:
+      Reference: MB135                   
+      StockNum: 84-01-021
+      DiscReas: 
+      Description: Silver 16"-18" chain     
+      Rsp: 20.00
+      Cnc: 000000008.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000007
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0911   
+      InvDate:  0611   
+    Product:
+      Reference: MB14                    
+      StockNum: 84-02-002
+      DiscReas: 
+      Description: heart bracelet           
+      Rsp: 80.00
+      Cnc: 000000033.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB153-6                 
+      StockNum: 84-04-029
+      DiscReas: 
+      Description: Secret Treasure Snowflake
+      Rsp: 45.00
+      Cnc: 000000018.75
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1111   
+    Product:
+      Reference: MB16                    
+      StockNum: 84-02-003
+      DiscReas: 
+      Description: pearl station bracelet   
+      Rsp: 26.00
+      Cnc: 000000010.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0311   
+      InvDate:  1110   
+    Product:
+      Reference: MB17                    
+      StockNum: 84-01-005
+      DiscReas: 
+      Description: cinderella necklace      
+      Rsp: 90.00
+      Cnc: 000000037.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB18                    
+      StockNum: 84-01-006
+      DiscReas: 
+      Description: snow white necklace      
+      Rsp: 90.00
+      Cnc: 000000037.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB19                    
+      StockNum: 84-01-007
+      DiscReas: 
+      Description: sleeping beauty necklace 
+      Rsp: 90.00
+      Cnc: 000000037.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  1110   
+      InvDate:  0611   
+    Product:
+      Reference: MB24                    
+      StockNum: 84-01-008
+      DiscReas: 
+      Description: pearl station necklace   
+      Rsp: 50.00
+      Cnc: 000000020.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000005
+      SaleDate:  1211   
+      InvDate:  1111   
+    Product:
+      Reference: MB25-1                  
+      StockNum: 84-05-001
+      DiscReas: 
+      Description: fwp drop er              
+      Rsp: 35.00
+      Cnc: 000000014.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00002
+      Qtr2:  00000
+      SoldYTD:  000003
+      SaleDate:  1111   
+      InvDate:  1111   
+    Product:
+      Reference: MB25-2                  
+      StockNum: 84-05-002
+      DiscReas: 
+      Description: fwp stud er              
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000001
+      SaleDate:  1211   
+      InvDate:  0611   
+    Product:
+      Reference: MB28-1                  
+      StockNum: 84-01-009
+      DiscReas: 
+      Description: pink tourmaline cross    
+      Rsp: 50.00
+      Cnc: 000000020.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0511   
+      InvDate:  1110   
+    Product:
+      Reference: MB28-2                  
+      StockNum: 84-01-011
+      DiscReas: 
+      Description: blue topaz cross         
+      Rsp: 50.00
+      Cnc: 000000020.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  1210   
+      InvDate:  1110   
+    Product:
+      Reference: MB28-4                  
+      StockNum: 84-01-010
+      DiscReas: 
+      Description: white topaz cross        
+      Rsp: 50.00
+      Cnc: 000000020.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB28-5                  
+      StockNum: 84-01-012
+      DiscReas: 
+      Description: amethyst cross           
+      Rsp: 50.00
+      Cnc: 000000020.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-A                  
+      StockNum: 84-03-001
+      DiscReas: 
+      Description: letter A                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0611   
+      InvDate:  0611   
+    Product:
+      Reference: MB29-B                  
+      StockNum: 84-03-002
+      DiscReas: 
+      Description: letter B                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-C                  
+      StockNum: 84-03-003
+      DiscReas: 
+      Description: letter C                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-D                  
+      StockNum: 84-03-004
+      DiscReas: 
+      Description: letter D                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  1111   
+      InvDate:  1110   
+    Product:
+      Reference: MB29-E                  
+      StockNum: 84-03-005
+      DiscReas: 
+      Description: letter E                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-F                  
+      StockNum: 84-03-006
+      DiscReas: 
+      Description: letter F                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1111   
+    Product:
+      Reference: MB29-G                  
+      StockNum: 84-03-007
+      DiscReas: 
+      Description: letter G                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-H                  
+      StockNum: 84-03-008
+      DiscReas: 
+      Description: letter H                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00001
+      SoldYTD:  000001
+      SaleDate:  1011   
+      InvDate:  1111   
+    Product:
+      Reference: MB29-I                  
+      StockNum: 84-03-009
+      DiscReas: 
+      Description: letter I                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-J                  
+      StockNum: 84-03-010
+      DiscReas: 
+      Description: letter J                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0811   
+      InvDate:  1111   
+    Product:
+      Reference: MB29-K                  
+      StockNum: 84-03-011
+      DiscReas: 
+      Description: letter K                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0911   
+      InvDate:  1111   
+    Product:
+      Reference: MB29-L                  
+      StockNum: 84-03-012
+      DiscReas: 
+      Description: letter L                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0511   
+      InvDate:  0611   
+    Product:
+      Reference: MB29-M                  
+      StockNum: 84-03-013
+      DiscReas: 
+      Description: letter M                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0411   
+      InvDate:  0611   
+    Product:
+      Reference: MB29-N                  
+      StockNum: 84-03-014
+      DiscReas: 
+      Description: letter N                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-O                  
+      StockNum: 84-03-015
+      DiscReas: 
+      Description: letter O                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-P                  
+      StockNum: 84-03-016
+      DiscReas: 
+      Description: letter P                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-Q                  
+      StockNum: 84-03-017
+      DiscReas: 
+      Description: letter Q                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1111   
+    Product:
+      Reference: MB29-R                  
+      StockNum: 84-03-018
+      DiscReas: 
+      Description: letter R                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1111   
+    Product:
+      Reference: MB29-S                  
+      StockNum: 84-03-019
+      DiscReas: 
+      Description: letter S                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0211   
+      InvDate:  0611   
+    Product:
+      Reference: MB29-T                  
+      StockNum: 84-03-020
+      DiscReas: 
+      Description: letter T                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0711   
+      InvDate:  1111   
+    Product:
+      Reference: MB29-U                  
+      StockNum: 84-03-021
+      DiscReas: 
+      Description: letter U                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  1011   
+      InvDate:  1111   
+    Product:
+      Reference: MB29-V                  
+      StockNum: 84-03-022
+      DiscReas: 
+      Description: letter V                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-W                  
+      StockNum: 84-03-023
+      DiscReas: 
+      Description: letter W                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-Y                  
+      StockNum: 84-03-024
+      DiscReas: 
+      Description: letter Y                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB29-Z                  
+      StockNum: 84-03-025
+      DiscReas: 
+      Description: letter Z                 
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB30-1                  
+      StockNum: 84-03-026
+      DiscReas: 
+      Description: plain sil heart          
+      Rsp: 43.00
+      Cnc: 000000017.95
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB30-2                  
+      StockNum: 84-04-001
+      DiscReas: 
+      Description: pale pink enamel heart   
+      Rsp: 45.00
+      Cnc: 000000018.75
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  1210   
+      InvDate:  1110   
+    Product:
+      Reference: MB30-3                  
+      StockNum: 84-04-002
+      DiscReas: 
+      Description: deep pink enamel heart   
+      Rsp: 45.00
+      Cnc: 000000018.75
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB30-4                  
+      StockNum: 84-04-003
+      DiscReas: 
+      Description: red enamel heart         
+      Rsp: 45.00
+      Cnc: 000000018.75
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  0611   
+    Product:
+      Reference: MB30-5                  
+      StockNum: 84-04-004
+      DiscReas: 
+      Description: baby blue enamel heart   
+      Rsp: 45.00
+      Cnc: 000000018.75
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  0611   
+    Product:
+      Reference: MB30-6                  
+      StockNum: 84-04-005
+      DiscReas: 
+      Description: lavender enamel heart    
+      Rsp: 45.00
+      Cnc: 000000018.75
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  0111   
+      InvDate:  0611   
+    Product:
+      Reference: MB30-7                  
+      StockNum: 84-04-006
+      DiscReas: 
+      Description: white enamel heart       
+      Rsp: 41.00
+      Cnc: 000000016.70
+      GM:    0051
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-1                  
+      StockNum: 84-04-007
+      DiscReas: 
+      Description: strawberry jelly bean    
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000003
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-10                 
+      StockNum: 84-04-016
+      DiscReas: 
+      Description: chocolate jelly bean     
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-11                 
+      StockNum: 84-03-027
+      DiscReas: 
+      Description: signatureSilver jellybean
+      Rsp: 40.00
+      Cnc: 000000016.70
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0711   
+      InvDate:  1111   
+    Product:
+      Reference: MB31-2                  
+      StockNum: 84-04-008
+      DiscReas: 
+      Description: raspberry jelly bean     
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000003
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-3                  
+      StockNum: 84-04-009
+      DiscReas: 
+      Description: blueberry jelly bean     
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-4                  
+      StockNum: 84-04-010
+      DiscReas: 
+      Description: grape jelly bean         
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0911   
+      InvDate:  1110   
+    Product:
+      Reference: MB31-5                  
+      StockNum: 84-04-011
+      DiscReas: 
+      Description: orange jelly bean        
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-6                  
+      StockNum: 84-04-012
+      DiscReas: 
+      Description: lemon jelly bean         
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-7                  
+      StockNum: 84-04-013
+      DiscReas: 
+      Description: ice cream jelly bean     
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-8                  
+      StockNum: 84-04-014
+      DiscReas: 
+      Description: apple jelly bean         
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB31-9                  
+      StockNum: 84-04-015
+      DiscReas: 
+      Description: pear jelly bean          
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB32                    
+      StockNum: 84-01-014
+      DiscReas: 
+      Description: 16" chain                
+      Rsp: 18.00
+      Cnc: 000000006.25
+      GM:    0058
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000002
+      SaleDate:  0511   
+      InvDate:  1110   
+    Product:
+      Reference: MB33                    
+      StockNum: 84-01-015
+      DiscReas: 
+      Description: 18" chain                
+      Rsp: 18.00
+      Cnc: 000000006.25
+      GM:    0058
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  0111   
+      InvDate:  1110   
+    Product:
+      Reference: MB34-01                 
+      StockNum: 84-02-004
+      DiscReas: 
+      Description: stawberry jelly bean blet
+      Rsp: 95.00
+      Cnc: 000000039.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB34-02                 
+      StockNum: 84-02-005
+      DiscReas: 
+      Description: raspberry jelly bean blet
+      Rsp: 95.00
+      Cnc: 000000039.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0811   
+      InvDate:  1110   
+    Product:
+      Reference: MB34-03                 
+      StockNum: 84-02-006
+      DiscReas: 
+      Description: blueberry jelly bean blet
+      Rsp: 95.00
+      Cnc: 000000039.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB34-04                 
+      StockNum: 84-02-007
+      DiscReas: 
+      Description: grape jelly bean blet    
+      Rsp: 95.00
+      Cnc: 000000039.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB34-5                  
+      StockNum: 84-02-008
+      DiscReas: 
+      Description: signature jelly bean blet
+      Rsp: 95.00
+      Cnc: 000000039.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB35                    
+      StockNum: 84-01-013
+      DiscReas: 
+      Description: 14" chain                
+      Rsp: 18.00
+      Cnc: 000000006.35
+      GM:    0057
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00002
+      SoldYTD:  000001
+      SaleDate:  0211   
+      InvDate:  1110   
+    Product:
+      Reference: MB35-A-3                
+      StockNum: 84-04-021
+      DiscReas: 
+      Description: dishy fishy pink         
+      Rsp: 32.00
+      Cnc: 000000012.50
+      GM:    0053
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB35-A-4                
+      StockNum: 84-04-022
+      DiscReas: 
+      Description: dishy fishy blue         
+      Rsp: 32.00
+      Cnc: 000000012.50
+      GM:    0053
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB35-A-6                
+      StockNum: 84-04-023
+      DiscReas: 
+      Description: dishy fishy yellow       
+      Rsp: 32.00
+      Cnc: 000000012.50
+      GM:    0053
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  1210   
+      InvDate:  1110   
+    Product:
+      Reference: MB36B-1                 
+      StockNum: 84-04-017
+      DiscReas: 
+      Description: yellow love heart        
+      Rsp: 32.00
+      Cnc: 000000013.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB36B-2                 
+      StockNum: 84-04-018
+      DiscReas: 
+      Description: green love heart         
+      Rsp: 32.00
+      Cnc: 000000013.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB36B-3                 
+      StockNum: 84-04-019
+      DiscReas: 
+      Description: blue love heart          
+      Rsp: 32.00
+      Cnc: 000000013.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB36B-4                 
+      StockNum: 84-04-020
+      DiscReas: 
+      Description: pink love heart          
+      Rsp: 32.00
+      Cnc: 000000013.35
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  1110   
+      InvDate:  1110   
+    Product:
+      Reference: MB36B-5                 
+      StockNum: 84-03-028
+      DiscReas: 
+      Description: silver love heart        
+      Rsp: 30.00
+      Cnc: 000000012.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000001
+      SaleDate:  0511   
+      InvDate:  1110   
+    Product:
+      Reference: MB38                    
+      StockNum: 84-02-009
+      DiscReas: 
+      Description: adult bracelet           
+      Rsp: 65.00
+      Cnc: 000000027.10
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0511   
+      InvDate:  1110   
+    Product:
+      Reference: MB43                    
+      StockNum: 84-01-016
+      DiscReas: 
+      Description: 14" pearly girly necklace
+      Rsp: 55.00
+      Cnc: 000000022.95
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB44                    
+      StockNum: 84-01-017
+      DiscReas: 
+      Description: 16" pearly girly necklace
+      Rsp: 55.00
+      Cnc: 000000022.95
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0711   
+      InvDate:  1110   
+    Product:
+      Reference: MB45                    
+      StockNum: 84-01-018
+      DiscReas: 
+      Description: 18" pearly girly necklace
+      Rsp: 55.00
+      Cnc: 000000022.95
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB46                    
+      StockNum: 84-02-010
+      DiscReas: 
+      Description: sml pearly girly blet    
+      Rsp: 48.00
+      Cnc: 000000020.00
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB47                    
+      StockNum: 84-02-011
+      DiscReas: 
+      Description: large pearly girly blet  
+      Rsp: 48.00
+      Cnc: 000000020.00
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  1210   
+      InvDate:  1110   
+    Product:
+      Reference: MB49-1                  
+      StockNum: 84-01-022
+      DiscReas: 
+      Description: Pink Aurora fairy nlet   
+      Rsp: 60.00
+      Cnc: 000000025.00
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  0611   
+    Product:
+      Reference: MB49-4                  
+      StockNum: 84-04-027
+      DiscReas: 
+      Description: red fairy charm          
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00003
+      SoldYTD:  000000
+      SaleDate:  1210   
+      InvDate:  1111   
+    Product:
+      Reference: MB49-7                  
+      StockNum: 84-04-028
+      DiscReas: 
+      Description: Fuchsia Fairy Charm      
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1111   
+    Product:
+      Reference: MB49-8                  
+      StockNum: 84-03-029
+      DiscReas: 
+      Description: Gold Fairy Charm         
+      Rsp: 42.00
+      Cnc: 000000017.50
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1111   
+    Product:
+      Reference: MB52                    
+      StockNum: 84-02-012
+      DiscReas: 
+      Description: christening bracelet     
+      Rsp: 35.00
+      Cnc: 000000010.25
+      GM:    0064
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00001
+      SoldYTD:  000000
+      SaleDate:  1110   
+      InvDate:  1110   
+    Product:
+      Reference: MB53                    
+      StockNum: 84-01-003
+      DiscReas: 
+      Description: mop cross necklace       
+      Rsp: 50.00
+      Cnc: 000000020.85
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00001
+      SoldYTD:  000002
+      SaleDate:  0811   
+      InvDate:  0611   
+    Product:
+      Reference: MB54-1                  
+      StockNum: 84-02-014
+      DiscReas: 
+      Description: Pink Aurora fairy blet   
+      Rsp: 95.00
+      Cnc: 000000039.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0811   
+      InvDate:  1111   
+    Product:
+      Reference: MB55-1                  
+      StockNum: 84-02-013
+      DiscReas: 
+      Description: Pink Aurora fairy bangle 
+      Rsp: 70.00
+      Cnc: 000000029.20
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00001
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0911   
+      InvDate:  1111   
+    Product:
+      Reference: MB58-1                  
+      StockNum: 84-04-024
+      DiscReas: 
+      Description: tinkerbelle silver       
+      Rsp: 33.00
+      Cnc: 000000013.75
+      GM:    0050
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000002
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000000
+      SaleDate: 
+      InvDate:  1110   
+    Product:
+      Reference: MB58-2                  
+      StockNum: 84-04-025
+      DiscReas: 
+      Description: tinkerbelle pink         
+      Rsp: 35.00
+      Cnc: 000000014.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000000
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0511   
+      InvDate:  1110   
+    Product:
+      Reference: MB58-3                  
+      StockNum: 84-04-026
+      DiscReas: 
+      Description: tinkerbelle purple       
+      Rsp: 35.00
+      Cnc: 000000014.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0511   
+      InvDate:  1110   
+    Product:
+      Reference: MB59                    
+      StockNum: 84-01-019
+      DiscReas: 
+      Description: molly brown tag necklace 
+      Rsp: 35.00
+      Cnc: 000000014.60
+      GM:    0049
+      OrdQty: 000000
+      Location:   0 
+      CurrStk:  0000001
+      DepStk:  0000000
+      Qtr1:  00000
+      Qtr2:  00000
+      SoldYTD:  000001
+      SaleDate:  0511   
+      InvDate:  1110   

@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'nokogiri'
 require 'active_support'
+require 'bsmart'
 
 if ARGV.size == 0
   puts "Usage: bsmart-list-stock catalog.xml [options]"
   exit 0
 end
+
+putter = Bsmart::TabbedPutter.new(STDOUT)
 
 catalog_file = ARGV[0]
 
@@ -18,17 +22,17 @@ else
 end
 
 catalog.xpath(xpath).each do |supplier|
-  tab_counter = 0
-  puts 'Supplier:'
-  tab_counter += 1
-  puts "#{'  ' * tab_counter}Code: #{supplier['name'][0..3]}"
-  puts "#{'  ' * tab_counter}Name: #{supplier['name'][7..supplier['name'].length].strip}"
-  puts "#{'  ' * tab_counter}Products:"
+  putter.puts 'Supplier:'
+  putter.tab!
+
+  putter.puts("Code: #{supplier['name'][0..3]}")
+  putter.puts("Name: #{supplier['name'][7..supplier['name'].length].strip}")
+  putter.puts("Products:")
 
   supplier.xpath("product[Reference != '']").each do |product|
-    tab_counter += 1
-    puts "#{'  ' * tab_counter}Product:"
-    tab_counter += 1
+    putter.tab!
+    putter.puts("Product:")
+    putter.tab!
     product.children.each do |attribute|
       unless attribute.name == "text"
         if attribute.name == "Rsp"
@@ -36,9 +40,10 @@ catalog.xpath(xpath).each do |supplier|
         else
           val = attribute.text
         end
-        puts "#{'  ' * tab_counter}#{attribute.name}: #{val}"
+        putter.puts("#{attribute.name}: #{val}")
       end
     end
-    tab_counter -= 2
+    putter.un_tab!
+    putter.un_tab!
   end
 end
