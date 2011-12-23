@@ -129,4 +129,3 @@ Feature: transform bsmart's catalog
 </supplier>
 </catalog>
       """
-    And the contents of "catalog.xml" should be UTF-8

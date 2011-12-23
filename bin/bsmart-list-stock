@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'rubygems'
 require 'nokogiri'
 require 'active_support'
 require 'bsmart'
@@ -9,11 +11,9 @@ if ARGV.size == 0
   exit 0
 end
 
-putter = Bsmart::TabbedPutter.new(STDOUT)
-
+putter       = Bsmart::TabbedPutter.new(STDOUT)
 catalog_file = ARGV[0]
-
-catalog = Nokogiri::XML(File.read(catalog_file))
+catalog      = Nokogiri::XML(File.read(catalog_file))
 
 if ARGV[1] == '-s'
   xpath = "/catalog/supplier[substring(@name, 1, 4)='#{ARGV[2]}']"
@@ -33,6 +33,7 @@ catalog.xpath(xpath).each do |supplier|
     putter.tab!
     putter.puts("Product:")
     putter.tab!
+
     product.children.each do |attribute|
       unless attribute.name == "text"
         if attribute.name == "Rsp"
@@ -43,6 +44,7 @@ catalog.xpath(xpath).each do |supplier|
         putter.puts("#{attribute.name}: #{val}")
       end
     end
+
     putter.un_tab!
     putter.un_tab!
   end
