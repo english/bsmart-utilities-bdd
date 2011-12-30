@@ -67,7 +67,7 @@ Feature: bsmart-list-stock - list stock information from a catalog
 
   Scenario: Run bsmart-list-stock with -s argument
     Given a full catalog.xml
-    When I run `bsmart-list-stock full-catalog.xml -s "0630"`
+    When I run `bsmart-list-stock full-catalog.xml -s 0630`
     Then the output should contain "Name: Nomination"
     And the output should contain "StockNum: 81-01-"
     And the output should not contain "StockNum: 77-01-"
