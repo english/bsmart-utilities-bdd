@@ -3,7 +3,6 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 require 'rubygems'
 require 'nokogiri'
-require 'active_support'
 require 'bsmart'
 
 if ARGV.size == 0
