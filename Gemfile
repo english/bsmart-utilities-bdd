@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'nokogiri'
+gem 'roxml'
+gem 'i18n'
 
 group :development do
   gem 'cucumber'
@@ -9,6 +11,5 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-cucumber'
-  gem 'spork'
   gem 'ruby_gntp'
 end
