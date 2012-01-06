@@ -1,2 +1,3 @@
-require 'aruba/cucumber'
 $LOAD_PATH << File.expand_path('../../../lib', __FILE__)
+require 'bsmart'
+require 'aruba/cucumber'
