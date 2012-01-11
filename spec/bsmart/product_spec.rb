@@ -74,5 +74,11 @@ module Bsmart
       accurist.sold_this_year.should == 0
       ted.sold_this_year.should      == 2
     end
+
+    it "can be pretty printed" do
+      message = accurist.to_s
+      message.should =~ /Stock Number:\s{2,}.35-01-026/
+      message.should =~ /Reference:\s{2,}.3501000/
+    end
   end
 end

@@ -3,4 +3,4 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'bsmart'
 
-Bsmart::CLI::ListStock.new.run(ARGV)
+Bsmart::CLI::ListStock.new(ARGV).run

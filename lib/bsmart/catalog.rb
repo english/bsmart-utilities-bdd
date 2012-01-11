@@ -25,5 +25,13 @@ module Bsmart
     def counted_products
       products.inject(Hash.new(0)) { |hsh, prod| hsh[prod.reference] += 1; hsh }
     end
+
+    def to_s
+      output = ""
+      suppliers.each do |supplier|
+        output << "#{supplier}\n"
+      end
+      output << "This catalog has #{suppliers.count} suppliers and #{products.count} products."
+    end
   end
 end

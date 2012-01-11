@@ -2,7 +2,13 @@
 Given /^a full catalog\.xml$/ do
   @aruba_timeout_seconds = 20
   in_current_dir do
-    FileUtils.cp '../../assets/tidy.xml', 'full-catalog.xml'
+    FileUtils.cp '../../assets/catalog.xml', 'catalog.xml'
+  end
+end
+
+Given /^a sample catalog$/ do
+  in_current_dir do
+    FileUtils.cp '../../assets/catalog.xml', 'catalog.xml'
   end
 end
 

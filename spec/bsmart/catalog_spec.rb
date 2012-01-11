@@ -2,6 +2,7 @@ require 'spec_helper'
 
 module Bsmart
   describe Catalog do
+    let(:output)  { double('output') }
     let(:catalog) { Catalog.from_xml(File.read('assets/tidy-sample.xml')) }
 
     it "uses the ROXML library" do
@@ -52,6 +53,16 @@ module Bsmart
 
       matches.count.should == 2
       matches.all? { |product| product.reference == 'ITE1005' }
+    end
+
+    it "can be printed" do
+      $stdout.should_receive(:puts)
+      puts catalog
+    end
+
+    it "is printed in a nicely formatted way" do
+      msg = catalog.to_s
+      msg.should =~ /2 suppliers and 6 products/
     end
   end
 end
