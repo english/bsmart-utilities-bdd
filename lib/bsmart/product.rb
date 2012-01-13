@@ -15,17 +15,17 @@ module Bsmart
     xml_reader(:sold_this_year,   :from => 'SoldYTD')     { |qty| qty.strip.to_i }
 
     def to_s
-      "Product:\n" +
-      "  Reference:        #{reference}\n" +
-      "  Stock Number:     #{stock_number}\n" +
-      "  Description:      #{description}\n" +
-      "  Rsp:              #{rsp}\n" +
-      "  Cost:             #{cost}\n" +
-      "  Margin:           #{margin}\n" +
-      "  Order Quantity:   #{order_quantity}\n" +
-      "  Stock Quantity:   #{stock_quantity}\n" +
-      "  Deposit Quantity: #{deposit_quantity}\n" +
-      "  Sold This Year:   #{sold_this_year}\n"
+      "  Product:\n" +
+      "    Reference:        #{reference}\n" +
+      "    Stock Number:     #{stock_number}\n" +
+      "    Description:      #{description}\n" +
+      "    Rsp:              #{rsp}\n" +
+      "    Cost:             #{cost}\n" +
+      "    Margin:           #{margin}\n" +
+      "    Order Quantity:   #{order_quantity}\n" +
+      "    Stock Quantity:   #{stock_quantity}\n" +
+      "    Deposit Quantity: #{deposit_quantity}\n" +
+      "    Sold This Year:   #{sold_this_year}\n"
     end
   end
 end
