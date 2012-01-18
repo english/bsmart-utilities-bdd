@@ -1,5 +1,7 @@
 $LOAD_PATH << File.expand_path('lib', __FILE__)
 
+require 'bsmart'
+
 task :get_catalog do
   require 'iconv'
   require 'benchmark'
@@ -44,4 +46,8 @@ task :get_catalog_java do
   end
 
   puts time
+end
+
+task :list_stock do
+  Bsmart::CLI::ListStock.new(['assets/catalog.xml']).run
 end
