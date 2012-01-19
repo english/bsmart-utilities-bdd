@@ -3,3 +3,4 @@ tmp/*
 assets/*.xml
 .rvmrc
 .redcar/
+Rakefile
