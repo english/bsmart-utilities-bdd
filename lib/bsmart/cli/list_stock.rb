@@ -25,9 +25,9 @@ module Bsmart
       def get_catalog
         if correct_arguments?
           if @args[1] == '-s'
-            Catalog.from_xml(supplier_node)
+            Stock::Catalog.from_xml(supplier_node)
           else
-            Catalog.from_xml(File.read(@args.first))
+            Stock::Catalog.from_xml(File.read(@args.first))
           end
         end
       end
