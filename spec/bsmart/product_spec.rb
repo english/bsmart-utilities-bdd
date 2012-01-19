@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Bsmart
   describe Product do
-    let(:catalog)  { Catalog.from_xml(File.read('assets/tidy-sample.xml')) }
+    let(:catalog)  { Catalog.from_xml(File.read('assets/small-catalog.xml')) }
     let(:accurist) { catalog.suppliers[0].products.first }
     let(:ted)      { catalog.suppliers[1].products.first }
 

@@ -15,19 +15,17 @@ Feature: bsmart-list-stock - list stock information from a catalog
       """
 
   Scenario: show all stock info from catalog
-    Given a sample catalog
-    When I run `bsmart-list-stock catalog.xml`
-    Then the output should contain "  Code: 0001"
-    And the output should contain "  Name: ACCURIST WATCHES"
-    And the output should contain "  Product:"
-    And the output should contain "    Reference:        GD1461"
-    And the output should contain "    Stock Number:     35-25-041"
-    And the output should contain "    Description:      Gts9Y Accurist/WhtRN/Blt"
-    And the output should contain "    Rsp:              1750"
+    When I run `bsmart-list-stock ../../assets/small-catalog.xml`
+    Then the output should contain "Code: 0001"
+    And the output should match /Name: ACCURIST WATCHES/
+    And the output should match /Product:/
+    And the output should match /Reference:\s{2,}3501000/
+    And the output should match /Stock Number:\s{2,}35-01-026/
+    And the output should match /Description:\s{2,}Lds GP Rect MOP Set/
+    And the output should match /Rsp:\s{2,}80\.0/
 
   Scenario: Run bsmart-list-stock with -s argument
-    Given a sample catalog
-    When I run `bsmart-list-stock catalog.xml -s 0630`
+    When I run `bsmart-list-stock ../../assets/small-catalog.xml -s 0630`
     Then the output should contain "Name: Nomination"
     And the output should contain "Stock Number:     81-01-"
     And the output should not contain "Stock Number: 77-01-"

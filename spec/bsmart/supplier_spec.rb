@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Bsmart
   describe Supplier do
-    let(:catalog) { Catalog.from_xml(File.read('assets/tidy-sample.xml')) }
+    let(:catalog) { Catalog.from_xml(File.read('assets/small-catalog.xml')) }
 
     it "has a name" do
       accurist = catalog.suppliers.first

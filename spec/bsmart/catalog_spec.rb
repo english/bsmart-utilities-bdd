@@ -3,11 +3,11 @@ require 'spec_helper'
 module Bsmart
   describe Catalog do
     let(:output)  { double('output') }
-    let(:catalog) { Catalog.from_xml(File.read('assets/tidy-sample.xml')) }
+    let(:catalog) { Catalog.from_xml(File.read('assets/small-catalog.xml')) }
 
     it "uses the ROXML library" do
       lambda do
-        Catalog.from_xml(File.read('assets/tidy-sample.xml'))
+        Catalog.from_xml(File.read('assets/small-catalog.xml'))
       end.should_not raise_error
     end
 
@@ -56,7 +56,7 @@ module Bsmart
     end
 
     it "can be printed" do
-      $stdout.should_receive(:puts)
+      catalog.should_receive(:to_s)
       puts catalog
     end
 

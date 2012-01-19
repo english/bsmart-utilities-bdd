@@ -4,7 +4,7 @@ module Bsmart
   module CLI
     describe ListStock do
       it "prints the catalog" do
-        args = ['assets/tidy-sample.xml']
+        args = ['assets/small-catalog.xml']
         stock_lister = ListStock.new(args)
         catalog = stock_lister.catalog
 
@@ -23,7 +23,7 @@ USAGE
       end
 
       it "prints a specific supplier if specified" do
-        args = ['assets/tidy-sample.xml', '-s', '0001']
+        args = ['assets/small-catalog.xml', '-s', '0001']
         output = double('output').as_null_object
         stock_lister = ListStock.new(args, output)
         catalog = stock_lister.catalog
