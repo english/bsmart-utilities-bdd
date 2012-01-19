@@ -1,10 +1,11 @@
 $LOAD_PATH << File.expand_path('lib', __FILE__)
 
 require 'bsmart'
+require 'benchmark'
+require 'benchmark'
 
 task :get_catalog do
   require 'iconv'
-  require 'benchmark'
 
   time = Benchmark.realtime do
     require 'nokogiri'
@@ -22,7 +23,6 @@ end
 
 task :get_catalog_java do
   require 'iconv'
-  require 'benchmark'
   time = Benchmark.realtime do
     require 'java'
     $CLASSPATH << File.expand_path('../../lib/java/xalan.jar', __FILE__)
@@ -49,5 +49,7 @@ task :get_catalog_java do
 end
 
 task :list_stock do
-  Bsmart::CLI::ListStock.new(['assets/catalog.xml']).run
+  10000.times do
+    Bsmart::CLI::ListStock.new(['assets/small-catalog.xml']).run
+  end
 end
