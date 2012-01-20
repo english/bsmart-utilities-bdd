@@ -8,6 +8,7 @@ module Bsmart
       let(:garnet_necklace)      { catalog.products[0] }
       let(:onyx_necklace)        { catalog.products[1] }
       let(:rose_quartz_necklace) { catalog.products[2] }
+      let(:ring)                 { catalog.products[3] }
 
       describe :status do
         it "can be 'Add'" do
@@ -75,15 +76,29 @@ module Bsmart
       end
 
       it "belongs to categories" do
-        garnet_necklace.stub(:brand).and_return("Georg Jensen")
-
         garnet_necklace.categories.should include("Neckwear")
         garnet_necklace.categories.should include("Brands/Georg Jensen")
       end
 
       describe "additional attributes" do
-        it "has a brand" do
-          garnet_necklace.brand.should == "Georg Jensen"
+        context "when the attribute is set" do
+          it "returns the value" do
+            garnet_necklace.brand.should == "Georg Jensen"
+            garnet_necklace.jensen_collection.should == "Carnival"
+            ring.material.should == "Platinum"
+          end
+
+          it "forms an array of values when multiple are set. E.g. Stone and 2nd Stone" do
+            garnet_necklace.stone.should include("Quartz")
+            garnet_necklace.stone.should include("Garnet")
+          end
+
+          context "when the attribute is not set" do
+            it "raises #{:NoMethodError} when asked for the attribute" do
+              lambda { onyx_necklace.brand }.should raise_error(NoMethodError)
+              lambda { garnet_necklace.neckwear_type }.should raise_error(NoMethodError)
+            end
+          end
         end
       end
     end

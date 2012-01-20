@@ -32,12 +32,43 @@ module Bsmart
       xml_accessor :name, :from => "WEBDESC"
       xml_accessor(:description, :from => "NOTEPAD") {|d| d.strip }
       xml_accessor(:category, :from => "CATEGORY", :as => Integer) {|code| CATEGORIES[code] }
-      xml_accessor :attributes, :as => [Attribute]
+      xml_accessor :attributes, :from => "ATTRIBUTE", :as => [Attribute]
 
       def categories
-        @categories ||= self.brand ? \
-          [ self.category, "Brands/#{self.brand}" ] : \
-          [ self.category ]
+        @categories ||= self.brand \
+          ? [self.category, "Brands/#{self.brand}"] \
+          : [self.category]
+      end
+
+      def stone
+        first = find_attribute_value_by_name('Stone')
+        if first.nil?
+          return []
+        end
+
+        second = self.second_stone
+        if second.nil?
+          return [first]
+        else
+          return [first, second]
+        end
+      end
+
+      private
+
+      def find_attribute_value_by_name(name)
+        attr = attributes.find { |element| element.name == name }
+        return attr.value if attr
+      end
+
+      def method_missing(method, *args, &block)
+        attributes.each do |attr|
+          if method == attr.name.gsub(' ', '_').gsub('2nd', 'second').downcase.to_sym
+            return attr.value unless attr.value.empty?
+          end
+        end
+
+        super(method, *args, &block)
       end
     end
   end

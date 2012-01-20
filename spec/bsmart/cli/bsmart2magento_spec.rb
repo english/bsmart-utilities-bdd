@@ -11,13 +11,25 @@ module Bsmart
         end
       end
 
-      it "outputs a csv file"
+      context "when supplied a catalog argument" do
+        it "reads the catalog form the path provided"
+      end
 
-      it "takes an input catalog argument"
+      context "when not supplied a catalog argument" do
+        it "reads the catalog from the default path"
+      end
 
-      it "takes an output csv argument"
+      context "when supplied a csv argument" do
+        it "outputs a csv file to the location provided"
+      end
 
-      it "can be run as a daemon"
+      context "when not supplied a csv argument" do
+        it "outputs a csv file to the default path"
+      end
+
+      context "when passed the -d arguement" do
+        it "runs as a daemon"
+      end
     end
   end
 end

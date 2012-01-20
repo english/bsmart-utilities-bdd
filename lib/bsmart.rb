@@ -10,6 +10,7 @@ module Bsmart
   require 'bsmart/stock/product'
   require 'bsmart/stock/supplier'
   require 'bsmart/stock/catalog'
+  require 'bsmart/ecom/attribute'
   require 'bsmart/ecom/product'
   require 'bsmart/ecom/catalog'
 end

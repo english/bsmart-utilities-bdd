@@ -10,17 +10,15 @@ module Bsmart
       end
 
       it "has products" do
-        pending do
-          catalog = Catalog.from_xml(File.read('assets/ecom_catalog.xml'))
+        catalog = Catalog.from_xml(File.read('assets/ecom_catalog.xml'))
 
-          catalog.products.should be_an(Array)
+        catalog.products.should be_an(Array)
 
-          catalog.products.all? do |product|
-            product.class == Product
-          end.should be_true
+        catalog.products.all? do |product|
+          product.class == Product
+        end.should be_true
 
-          catalog.products.count.should == 4
-        end
+        catalog.products.count.should == 4
       end
     end
   end
