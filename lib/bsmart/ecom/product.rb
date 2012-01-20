@@ -14,6 +14,13 @@ module Bsmart
       xml_accessor :stock_number, :from => "STKNO"
       xml_accessor(:department, :from => "MENU") {|sub| "%02d" % sub }
       xml_accessor(:sub_department, :from => "SUBMENU") {|sub| "%02d" % sub }
+      xml_accessor :supplier_reference, :from => "SUPPLREF"
+      xml_accessor :supplier_shortname, :from => "SUPPLSHORT"
+      xml_accessor :quantity, :from => "QTY", :as => Integer
+      xml_accessor :price, :from => "PRICE", :as => Float
+      xml_accessor(:discontinued?, :from => "REASON") {|r| r == "D" }
+      xml_accessor :name, :from => "WEBDESC"
+      xml_accessor(:description, :from => "NOTEPAD") {|d| d.strip }
     end
   end
 end

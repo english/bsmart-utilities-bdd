@@ -4,6 +4,7 @@ module Bsmart
   module Ecom
     describe Product do
       let(:catalog) { Catalog.from_xml(File.read('assets/ecom_catalog.xml')) }
+
       let(:garnet_necklace)      { catalog.products[0] }
       let(:onyx_necklace)        { catalog.products[1] }
       let(:rose_quartz_necklace) { catalog.products[2] }
@@ -13,7 +14,7 @@ module Bsmart
           garnet_necklace.status.should == "Add"
         end
 
-        it ", 'Modify" do
+        it "Modify" do
           onyx_necklace.status.should == "Modify"
         end
 
@@ -33,6 +34,47 @@ module Bsmart
       it "has a subdepartment" do
         garnet_necklace.sub_department.should == "02"
       end
+
+      it "has a supplier_reference" do
+        rose_quartz_necklace.supplier_reference.should == "5502049"
+      end
+
+      it "has a supplier_shortname" do
+        garnet_necklace.supplier_shortname.should == "G JENSEN"
+      end
+
+      describe :quantity do
+        it "is an integer" do
+          garnet_necklace.quantity.should be_an_integer
+        end
+
+        it "can be positive" do
+          garnet_necklace.quantity.should == 1
+        end
+
+        it "can be negative" do
+          onyx_necklace.quantity.should == -1
+        end
+      end
+
+      it "has a price" do
+        garnet_necklace.price.should == 235
+      end
+
+      it "can be discontinued" do
+        garnet_necklace.should be_discontinued
+        rose_quartz_necklace.should_not be_discontinued
+      end
+
+      it "name" do
+        garnet_necklace.name.should == "Carnival Rose Quartz & Garnet Necklace"
+      end
+
+      it "has a description" do
+        garnet_necklace.description.should == "Georg Jensen 18inch silver curb chain with double curved garnet and rose quartz stone set silver drops."
+      end
+
+      it "belongs to a category"
     end
   end
 end
