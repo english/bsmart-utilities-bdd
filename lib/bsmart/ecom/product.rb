@@ -3,6 +3,16 @@ module Bsmart
     class Product
       include ROXML
 
+      CATEGORIES = {
+        1 => "Rings",
+        2 => "Charms",
+        4 => "Neckwear",
+        5 => "Wristwear",
+        6 => "Earrings",
+        8 => "Other",
+        9 => "Watches"
+      }
+
       xml_accessor :status, :from => "ATTR" do |attr|
         case attr
         when "A" then "Add"
@@ -21,6 +31,14 @@ module Bsmart
       xml_accessor(:discontinued?, :from => "REASON") {|r| r == "D" }
       xml_accessor :name, :from => "WEBDESC"
       xml_accessor(:description, :from => "NOTEPAD") {|d| d.strip }
+      xml_accessor(:category, :from => "CATEGORY", :as => Integer) {|code| CATEGORIES[code] }
+      xml_accessor :attributes, :as => [Attribute]
+
+      def categories
+        @categories ||= self.brand ? \
+          [ self.category, "Brands/#{self.brand}" ] : \
+          [ self.category ]
+      end
     end
   end
 end

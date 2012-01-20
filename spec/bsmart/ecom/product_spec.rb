@@ -74,7 +74,18 @@ module Bsmart
         garnet_necklace.description.should == "Georg Jensen 18inch silver curb chain with double curved garnet and rose quartz stone set silver drops."
       end
 
-      it "belongs to a category"
+      it "belongs to categories" do
+        garnet_necklace.stub(:brand).and_return("Georg Jensen")
+
+        garnet_necklace.categories.should include("Neckwear")
+        garnet_necklace.categories.should include("Brands/Georg Jensen")
+      end
+
+      describe "additional attributes" do
+        it "has a brand" do
+          garnet_necklace.brand.should == "Georg Jensen"
+        end
+      end
     end
   end
 end
