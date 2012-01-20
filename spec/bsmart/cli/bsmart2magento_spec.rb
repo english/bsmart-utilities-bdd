@@ -4,11 +4,9 @@ module Bsmart
   module CLI
     describe Bsmart2magento do
       it "instantiates a catalog" do
-        pending do
-          cli = Bsmart2magento.new
-          cli.run
-          cli.catalog.products.should_not be_nil
-        end
+        cli = Bsmart2magento.new
+        cli.run
+        cli.catalog.products.should_not be_nil
       end
 
       context "when supplied a catalog argument" do
