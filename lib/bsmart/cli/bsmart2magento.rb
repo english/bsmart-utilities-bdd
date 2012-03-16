@@ -4,7 +4,7 @@ module Bsmart
       attr_accessor :catalog
 
       def initialize
-        @catalog = Bsmart::Ecom::Catalog.new
+        @catalog = Bsmart::Ecom::Catalog.from_xml(File.read('assets/ecom_catalog.xml'))
       end
 
       def run

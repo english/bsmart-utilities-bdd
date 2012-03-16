@@ -2,23 +2,19 @@ $LOAD_PATH << File.expand_path('lib', __FILE__)
 
 require 'bsmart'
 require 'benchmark'
-require 'benchmark'
 
 task :get_catalog do
   require 'iconv'
 
-  time = Benchmark.realtime do
-    require 'nokogiri'
-    bsmart_catalog = '/Volumes/bsmart/data/DB1SC583.xml'
-    utf8 = Iconv.conv("utf8//ignore//translit", "us-ascii", File.read(bsmart_catalog))
+  require 'nokogiri'
+  bsmart_catalog = '/Volumes/bsmart/data/DB1SC583.xml'
+  utf8 = Iconv.conv("utf8//ignore//translit", "us-ascii", File.read(bsmart_catalog))
 
-    xml = Nokogiri::XML(utf8)
-    xslt = Nokogiri::XSLT(File.read('assets/stock.xsl'))
-    catalog = xslt.transform(xml)
+  xml = Nokogiri::XML(utf8)
+  xslt = Nokogiri::XSLT(File.read('assets/stock.xsl'))
+  catalog = xslt.transform(xml)
 
-    File.open('assets/catalog.xml', 'w') { |f| f.write catalog }
-  end
-  puts time
+  File.open('assets/catalog.xml', 'w') { |f| f.write catalog }
 end
 
 task :get_catalog_java do
