@@ -17,11 +17,26 @@ module Bsmart::CLI
     end
 
 		describe :run do
-			it "runs" do
+			it "responds to run" do
 				expect {
 					Bsmart::CLI::BsmartCSV.new(nil, nil).run
 				}.should_not raise_error NoMethodError
 			end
+
+      it "outputs a csv representation to the output file" do
+        subject = BsmartCSV.new input, 'output.csv'
+        class << subject
+          def io
+            @io ||= StringIO.new
+          end
+        end
+        subject.run
+
+        expected = CSV.parse Helpers.expected_csv
+        actual = CSV.parse subject.io.string
+
+        actual.should =~ expected
+      end
 		end
 	end
 end

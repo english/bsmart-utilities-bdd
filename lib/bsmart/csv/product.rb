@@ -9,10 +9,10 @@ module Bsmart::CSV
     xml_accessor :qty,  from: 'CurrStk' do |qty| qty.to_i.to_s end
     
     comma do
-      name
-      sku
-      reference
-      qty
+      sku 'sku'
+      reference 'reference'
+      name 'name'
+      qty 'qty'
     end
   end
 end

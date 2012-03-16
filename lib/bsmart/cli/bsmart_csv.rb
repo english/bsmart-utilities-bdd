@@ -4,11 +4,16 @@ module Bsmart::CLI
 	class BsmartCSV
 		def initialize input, output
       @input = input
+      @output = output
 		end
 
 		def run
-      
+      io << products.to_comma
 		end
+
+    def io
+      @io ||= File.new @output, 'wb'
+    end
 
     def products
       xml = Nokogiri::XML @input
