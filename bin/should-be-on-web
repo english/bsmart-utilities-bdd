@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path('../../lib', __FILE__)
+require 'bsmart'
+
+catalog = ARGV.shift
+web     = ARGV.shift
+
+puts Bsmart::CLI::ShouldBeOnWeb.new(catalog, web).answer

@@ -18,4 +18,12 @@ sku,reference,name,qty
 CSV
     csv.strip
   end
+
+  def self.in_stock_with_images_xml
+    File.read File.expand_path '../../fixtures/in_stock_with_images.xml', __FILE__
+  end
+
+  def self.on_web_csv
+    File.read File.expand_path '../../fixtures/on_web.csv', __FILE__
+  end
 end

@@ -6,6 +6,7 @@ module Bsmart
   require 'comma'
 
   require 'bsmart/tabbed_putter'
+  require 'bsmart/cli/should_be_on_web'
   require 'bsmart/cli/bsmart_csv'
   require 'bsmart/cli/list_stock'
   require 'bsmart/cli/bsmart2magento'
