@@ -1,15 +1,12 @@
-source 'http://rubygems.org'
+source :rubygems
 
-gem 'nokogiri'
-gem 'roxml'
-gem 'i18n'
+gem "roxml", "~> 3.3.1"
 
 group :development do
-  gem 'cucumber'
-  gem 'rspec'
-  gem 'aruba'
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'guard-cucumber'
-  gem 'ruby_gntp'
+  gem "cucumber", "~> 1.1.9"
+  gem "rspec", "~> 2.8.0"
+  gem "aruba", "~> 0.4.11"
+  gem "guard-rspec", "~> 0.6.0"
+  gem "guard-cucumber", "~> 0.7.5"
+  gem "ruby_gntp", "~> 0.3.4"
 end
