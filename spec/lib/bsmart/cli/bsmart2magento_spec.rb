@@ -4,6 +4,7 @@ module Bsmart
   module CLI
     describe Bsmart2magento do
       it "instantiates a catalog" do
+        pending
         cli = Bsmart2magento.new
         cli.run
         cli.catalog.products.should_not be_nil
@@ -11,6 +12,7 @@ module Bsmart
 
       context "when supplied a catalog argument" do
         it "reads the catalog form the path provided" do
+          pending
           cli = Bsmart2magento.new('-c assets/ecom_catalog_other.xml')
           cli.run
           cli.catalog.products.first.name.should == "Hugo Boss Watch" # or something
@@ -19,6 +21,7 @@ module Bsmart
 
       context "when not supplied a catalog argument" do
         it "reads the catalog from the default path" do
+          pending
           cli = Bsmart2magento.new
           cli.run
           cli.catalog.products.first.name.should == "Carnival Rose Quartz & Garnet Necklace"
@@ -27,6 +30,7 @@ module Bsmart
 
       context "when supplied a csv argument" do
         it "outputs a csv file to the location provided" do
+          pending
           cli = Bsmart2magento.new('-c assets/update_other.csv')
           cli.run
           File.exists?('assets/update_other.csv').should be_true
@@ -34,7 +38,9 @@ module Bsmart
       end
 
       context "when not supplied a csv argument" do
+        pending
         it "outputs a csv file to the default path" do
+          pending
           cli = Bsmart2magento.new
           cli.run
           File.exists?('assets/update.csv').should be_true
@@ -43,6 +49,7 @@ module Bsmart
 
       context "when passed the -d arguement" do
         it "runs as a daemon" do
+          pending
           cli = Bsmart2magento.new('-d')
           cli.run
 

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path('../../lib', __FILE__)
+require 'bsmart'
+
+input = IO.read ARGV.shift
+output = IO.read ARGV.shift
+
+Bsmart::CLI::BsmartCsv.new(input, output).run
