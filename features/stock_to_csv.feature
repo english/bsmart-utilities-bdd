@@ -1,4 +1,3 @@
-@wip
 Feature: Generate csv file from bsmart stock xml
 
   So that I can compare what we have in stock with other csv files
