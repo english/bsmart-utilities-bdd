@@ -1,4 +1,3 @@
-@wip
 Feature: Show stock that should be on the web
 
   Scenario: All stock already on web
