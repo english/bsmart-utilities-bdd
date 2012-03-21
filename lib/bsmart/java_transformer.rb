@@ -13,7 +13,7 @@ end
 end
 
 module Bsmart
-  class Transformer
+  class JavaTransformer
     attr_reader :output
 
     def initialize input, style
@@ -33,7 +33,7 @@ module Bsmart
     end
 
     def utf8
-      Iconv.conv "utf8//ignore//translit", "us-ascii", File.read(@input)
+      File.read(@input).encode "UTF-8", "us-ascii", invalid: :replace, undef: :replace
     end
 
     def stream_source

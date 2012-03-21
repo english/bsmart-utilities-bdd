@@ -1,4 +1,8 @@
-Given /^a stock xml named "([^"]*)" file just with in stock items with images$/ do |filename|
+Before do
+  @aruba_timeout_seconds = 10
+end
+
+Given /^a stock xml file named "([^"]*)" just with in stock items with images$/ do |filename|
 	in_current_dir do
 		FileUtils.cp '../../fixtures/in_stock_with_images.xml', filename
 	end
@@ -10,6 +14,12 @@ Given /^a csv file named "([^"]*)" with skus for products on the web$/ do |filen
 	end
 end
 
-Then /^I should see the skus for each product in the stock xml$/ do
-  pending # express the regexp above with the code you wish you had
+Given /^an xml file named "([^"]*)" with Sabo stock that have images but aren't on web$/ do |filename|
+	in_current_dir do
+		FileUtils.cp '../../fixtures/in_stock_with_images_not_on_web.xml', filename
+	end
+end
+
+Then /^the output should match the following:$/ do |table|
+  table.diff! CSV.parse all_output, col_sep: "\t"
 end

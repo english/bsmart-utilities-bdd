@@ -1,10 +1,16 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'bsmart/transformer'
 
-raise "usage: transform <brs_xml> <xsl> <output>" if ARGV.size < 2
+raise "usage: transform <brs_xml> <xsl>" if ARGV.size < 2
 
-transformer = Bsmart::Transformer.new *ARGV
+transformer = if RUBY_PLATFORM == 'java'
+                require 'bsmart/java_transformer'
+                Bsmart::JavaTransformer.new *ARGV
+              else
+                require 'bsmart/mri_transformer'
+                Bsmart::MRITransformer.new *ARGV
+              end
+
 transformer.transform
 puts transformer.output
