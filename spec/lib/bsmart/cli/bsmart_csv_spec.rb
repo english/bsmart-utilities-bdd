@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Bsmart::CLI
 	describe BsmartCSV do
-    let(:input) { Helpers.input_xml }
+    let(:input) { Helpers.sabo_catalog }
 
 		it "takes xml input and csv output files as args" do
 			expect {

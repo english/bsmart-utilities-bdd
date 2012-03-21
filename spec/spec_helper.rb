@@ -1,7 +1,7 @@
 require 'bsmart'
 
 module Helpers
-  def self.input_xml
+  def self.sabo_catalog
     File.read File.expand_path '../../fixtures/sabo_catalog.xml', __FILE__
   end
 
