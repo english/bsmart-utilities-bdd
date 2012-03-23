@@ -3,17 +3,24 @@ module Bsmart
     class Product
       include ROXML
 
+			attr_reader :stock_number, :reference
+
       xml_reader(:stock_number,     :from => 'StockNum')
       xml_reader(:margin,           :from => 'GM',       :as => Float)
       xml_reader(:deposit_quantity, :from => 'DepStk',   :as => Integer)
       xml_reader(:order_quantity,   :from => 'OrdQty',   :as => Integer)
-      xml_reader(:location,         :from => 'Location')    { |loc| loc.to_i }
-      xml_reader(:reference,        :from => 'Reference')   { |ref| ref.strip }
-      xml_reader(:description,      :from => 'Description') { |desc| desc.strip }
-      xml_reader(:rsp,              :from => 'Rsp')         { |rsp| sprintf("%.2f", rsp).to_f unless rsp.empty? }
-      xml_reader(:cost,             :from => 'Cnc')         { |cost| sprintf("%.2f", cost).to_f unless cost.empty? }
-      xml_reader(:stock_quantity,   :from => 'CurrStk')     { |qty| qty.strip.to_i  }
-      xml_reader(:sold_this_year,   :from => 'SoldYTD')     { |qty| qty.strip.to_i }
+      xml_reader(:location,         :from => 'Location')    { |loc| loc.to_i if loc }
+      xml_reader(:reference,        :from => 'Reference')   { |ref| ref.strip  if ref}
+      xml_reader(:description,      :from => 'Description') { |desc| desc.strip  if desc}
+      xml_reader(:rsp,              :from => 'Rsp')         { |rsp| sprintf("%.2f", rsp).to_f unless rsp.nil? or rsp.empty? }
+      xml_reader(:cost,             :from => 'Cnc')         { |cost| sprintf("%.2f", cost).to_f unless cost.nil? or cost.empty? }
+      xml_reader(:stock_quantity,   :from => 'CurrStk')     { |qty| qty.strip.to_i if qty }
+      xml_reader(:sold_this_year,   :from => 'SoldYTD')     { |qty| qty.strip.to_i if qty }
+
+			def initialize sku=nil, reference=nil
+				@stock_number = sku
+				@reference    = reference
+			end
 
       def to_s
         "  Product:\n" +
@@ -28,6 +35,18 @@ module Bsmart
         "    Deposit Quantity: #{deposit_quantity}\n" +
         "    Sold This Year:   #{sold_this_year}\n"
       end
+
+			def department
+				stock_number[0..1]
+			end
+
+			def sub_department
+				stock_number[3..4]
+			end
+
+			def image
+				"#{department}/#{sub_department}/#{stock_number}.jpg"
+			end
     end
   end
 end

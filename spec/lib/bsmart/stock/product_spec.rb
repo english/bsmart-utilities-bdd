@@ -81,6 +81,18 @@ module Bsmart
         message.should =~ /Stock Number:\s{2,}.35-01-026/
           message.should =~ /Reference:\s{2,}.3501000/
       end
+
+      it "has a department" do
+        accurist.department.should == '35'
+      end
+
+      it "has a sub_department" do
+        accurist.sub_department.should == '01'
+      end
+
+      it "has an image filename" do
+        accurist.image.should == '35/01/35-01-026.jpg'
+      end
     end
   end
 end

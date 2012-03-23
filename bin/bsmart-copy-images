@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path('../../lib', __FILE__)
+
+require 'bsmart'
+
+if ARGV.first == '--help'
+  puts "bsmart-copy-images <xml> <image_src> <image_dest>" 
+  exit
+end
+
+xml  = ARGV.shift
+src  = ARGV.shift
+dest = ARGV.shift
+
+catalog = Bsmart::Stock::Catalog.from_xml File.read xml
+images = Dir.glob "#{src}/**/*.jpg"
+
+puts catalog
+puts images
+
+copier = Bsmart::Stock::ImageCopier.new catalog
+copier.copy_images images, dest

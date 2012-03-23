@@ -17,7 +17,7 @@ Feature: Show stock that should be on the web
       | 7701620 | Key         | 
 
   Scenario: Give me all stock that isn't on web
-    Given an xml file named "catalog.xml"the following products:
+    Given an xml file named "catalog.xml" with the following products:
       | StockNum | Reference | Description | CurrStk | 
       | 7701001  | ref1      | Product 1   | 1       | 
       | 7701002  | ref2      | Product 2   | 2       | 

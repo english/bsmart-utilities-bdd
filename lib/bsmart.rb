@@ -13,6 +13,7 @@ module Bsmart
   require 'bsmart/stock/product'
   require 'bsmart/stock/supplier'
   require 'bsmart/stock/catalog'
+  require 'bsmart/stock/image_copier'
   require 'bsmart/ecom/attribute'
   require 'bsmart/ecom/product'
   require 'bsmart/ecom/catalog'
