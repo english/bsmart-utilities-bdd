@@ -1,3 +1,4 @@
+@ignore
 Feature: bsmart-list-stock - list stock information from a catalog
 
   In order to paint a picture of the stock we have

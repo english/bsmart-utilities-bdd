@@ -1,3 +1,4 @@
+@ignore
 Feature: bsmart-to-magento
 
   In order to keep the website stock up to date with the shop stock
