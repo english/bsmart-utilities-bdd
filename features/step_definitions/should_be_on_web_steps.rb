@@ -24,16 +24,13 @@ Then /^the output should match the following:$/ do |table|
   table.diff! CSV.parse all_output, col_sep: "\t"
 end
 
-Given /^an xml file named "([^"]*)"the following products:$/ do |filename, products_table|
+Given /^an xml file named "([^"]*)" with the following products:$/ do |filename, products_table|
   builder = Nokogiri::XML::Builder.new do |xml|
     xml.catalog {
       xml.supplier {
         products_table.hashes.each do |product|
           xml.product {
-            xml.StockNum    product[:StockNum]
-            xml.Description product[:Description]
-            xml.CurrStk     product[:CurrStk]
-            xml.Reference   product[:Reference]
+            product.each {|key, value| xml.send key.to_sym, value }
           }
         end
       }
