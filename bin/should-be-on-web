@@ -3,7 +3,8 @@
 $LOAD_PATH << File.expand_path('../../lib', __FILE__)
 require 'bsmart'
 
-catalog = File.read ARGV.shift
-web     = File.read ARGV.shift
+catalog  = File.read ARGV.shift
+web      = File.read ARGV.shift
+switch   = ARGV.shift
 
-puts Bsmart::CLI::ShouldBeOnWeb.new(catalog, web).answer
+puts Bsmart::CLI::ShouldBeOnWeb.new(catalog, web, switch).answer

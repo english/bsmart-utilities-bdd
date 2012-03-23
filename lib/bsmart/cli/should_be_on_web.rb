@@ -4,9 +4,14 @@ module Bsmart::CLI
   class ShouldBeOnWeb
 		IMAGE_ROOT = File.join *%w{ / Volumes bsmart Images }
 
-    def initialize catalog_xml, web_csv
+    def initialize catalog_xml, web_csv, switch
 			@catalog_xml = catalog_xml
 			@web_csv = web_csv
+      @ignore_images = switch == '--ignore-images'
+    end
+
+    def ignore_images?
+      @ignore_images
     end
 
     def answer
@@ -33,7 +38,7 @@ module Bsmart::CLI
 		end
 
 		def in_stock_with_images
-			in_stock_products.select {|product| product_has_image? product }
+      ignore_images? ? in_stock_products : in_stock_products.select {|product| product_has_image? product }
 		end
 
 		private

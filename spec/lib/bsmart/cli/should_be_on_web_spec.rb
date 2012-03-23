@@ -46,19 +46,38 @@ module Bsmart::CLI
       end
     end
 
-    it "gets the products that have images" do
-      xml = Helpers.in_stock_with_images_xml_not_on_web
-      csv = Helpers.on_web_csv
-      subject = ShouldBeOnWeb.new xml, csv
+    context "when supplied the --ignore-images argument" do
+      it "gets the products that have images" do
+        xml = Helpers.in_stock_with_images_xml_not_on_web
+        csv = Helpers.on_web_csv
+        subject = ShouldBeOnWeb.new xml, csv, '--ignore-images'
 
-      File.should_receive(:exists?).with('/Volumes/bsmart/Images/77/01/77-01-618.jpg').and_return true
-      File.should_receive(:exists?).with('/Volumes/bsmart/Images/77/01/77-01-619.jpg').and_return true
-      File.should_receive(:exists?).with('/Volumes/bsmart/Images/77/01/77-01-620.jpg').and_return false
+        File.should_not_receive(:exists?)
 
-      products = subject.in_stock_with_images
-      products[0].sku.should == 7701618
-      products[1].sku.should == 7701619
-      products.size.should == 2
+        products = subject.in_stock_with_images
+
+        products.size.should == 3
+        products[0].sku.should == 7701618
+        products[1].sku.should == 7701619
+        products[2].sku.should == 7701620
+      end
+    end
+
+    context "my default" do
+      it "gets the products that have images" do
+        xml = Helpers.in_stock_with_images_xml_not_on_web
+        csv = Helpers.on_web_csv
+        subject = ShouldBeOnWeb.new xml, csv
+
+        File.should_receive(:exists?).with('/Volumes/bsmart/Images/77/01/77-01-618.jpg').and_return true
+        File.should_receive(:exists?).with('/Volumes/bsmart/Images/77/01/77-01-619.jpg').and_return true
+        File.should_receive(:exists?).with('/Volumes/bsmart/Images/77/01/77-01-620.jpg').and_return false
+
+        products = subject.in_stock_with_images
+        products[0].sku.should == 7701618
+        products[1].sku.should == 7701619
+        products.size.should == 2
+      end
     end
 
     it "get the candidates for stock to add to web" do

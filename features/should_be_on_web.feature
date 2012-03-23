@@ -19,13 +19,13 @@ Feature: Show stock that should be on the web
   Scenario: Give me all stock that isn't on web
     Given an xml file named "catalog.xml"the following products:
       | StockNum | Description | CurrStk |
-      | 0101001  | Product 1   | 1       |
-      | 0101002  | Product 2   | 2       |
-      | 0101003  | Product 3   | 0       |
+      | 7701001  | Product 1   | 1       |
+      | 7701002  | Product 2   | 2       |
+      | 7701003  | Product 3   | 0       |
     And a csv file named "web.csv" with the following products:
       | sku     | name      | 
-      | 0101001 | Product 1 | 
+      | 7701001 | Product 1 | 
     When I run `should-be-on-web catalog.xml web.csv --ignore-images`
     Then the output should match the following:
       | sku     | name      | 
-      | 0101002 | Product 2 |
+      | 7701002 | Product 2 |
