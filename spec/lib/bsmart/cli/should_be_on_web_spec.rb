@@ -87,8 +87,8 @@ module Bsmart::CLI
 
       File.stub :exists? do |arg| arg != '/Volumes/bsmart/Images/77/01/77-01-620.jpg' end
       subject.candidates.should =~ [
-        OpenStruct.new(sku: 7701618, name: "Heart white"),
-        OpenStruct.new(sku: 7701619, name: "Padlock")
+        OpenStruct.new(sku: 7701618, ref: "0008-051-14", name: "Heart white"),
+        OpenStruct.new(sku: 7701619, ref: "0009-001-12", name: "Padlock")
       ]
     end
   end

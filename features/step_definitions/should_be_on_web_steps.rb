@@ -33,6 +33,7 @@ Given /^an xml file named "([^"]*)"the following products:$/ do |filename, produ
             xml.StockNum    product[:StockNum]
             xml.Description product[:Description]
             xml.CurrStk     product[:CurrStk]
+            xml.Reference   product[:Reference]
           }
         end
       }

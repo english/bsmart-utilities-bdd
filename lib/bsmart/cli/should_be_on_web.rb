@@ -4,7 +4,7 @@ module Bsmart::CLI
   class ShouldBeOnWeb
 		IMAGE_ROOT = File.join *%w{ / Volumes bsmart Images }
 
-    def initialize catalog_xml, web_csv, switch
+    def initialize catalog_xml, web_csv, switch=nil
 			@catalog_xml = catalog_xml
 			@web_csv = web_csv
       @ignore_images = switch == '--ignore-images'
@@ -19,9 +19,9 @@ module Bsmart::CLI
         "Nothing!"
       else
         CSV.generate col_sep: "\t" do |csv|
-          csv << ['sku', 'name']
+          csv << ['sku', 'ref', 'name']
           candidates.each do |product|
-            csv << [product.sku, product.name]
+            csv << [product.sku, product.ref, product.name]
           end
         end
       end
@@ -50,8 +50,9 @@ module Bsmart::CLI
 				stock = product.at_css('CurrStk').content.strip.to_i
 				name = product.at_css('Description').content.strip
 				sku = product.at_css('StockNum').content.strip.gsub('-', '').to_i
+				ref = product.at_css('Reference').content.strip
 
-				products << OpenStruct.new(name: name, sku: sku) if stock > 0
+				products << OpenStruct.new(name: name, sku: sku, ref: ref) if stock > 0
 			end
 			products
 		end
