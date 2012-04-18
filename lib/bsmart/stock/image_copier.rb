@@ -1,8 +1,9 @@
+require 'fileutils'
+
 module Bsmart::Stock
 	class ImageCopier
 		def initialize catalog
       @catalog = catalog
-      puts 'in constructor'
 		end
 
     def copy_images images, dest_prefix
@@ -20,7 +21,7 @@ module Bsmart::Stock
     end
 
     def find_image images, product
-      images.find {|image| File.basename(image, '.jpg') == product.reference }
+      images.find {|image| File.basename(image, '.jpg') =~ /^#{product.reference}/ }
     end
 
     def make_way_for filename
