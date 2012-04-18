@@ -4,12 +4,17 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 raise "usage: transform <brs_xml> <xsl>" if ARGV.size < 2
 
+shitty_xml = ARGV.shift
+xsl = ARGV.shift
+
+xml = File.read(shitty_xml).encode "UTF-8", "us-ascii", invalid: :replace, undef: :replace
+
 transformer = if RUBY_PLATFORM == 'java'
                 require 'bsmart/java_transformer'
-                Bsmart::JavaTransformer.new *ARGV
+                Bsmart::JavaTransformer.new xml, xsl
               else
                 require 'bsmart/mri_transformer'
-                Bsmart::MRITransformer.new *ARGV
+                Bsmart::MRITransformer.new xml, xsl
               end
 
 transformer.transform

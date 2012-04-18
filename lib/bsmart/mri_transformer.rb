@@ -4,21 +4,15 @@ module Bsmart
   class MRITransformer
     attr_reader :output
 
-    def initialize input, style
-      @input = input
+    def initialize xml, style
+      @xml   = xml
       @style = style
     end
 
     def transform
-      xml = Nokogiri::XML utf8
+      doc = Nokogiri::XML @xml
       xslt = Nokogiri::XSLT File.read @style
-      @output = xslt.transform xml
-    end
-
-    private
-
-    def utf8
-      File.read(@input).encode "UTF-8", "us-ascii", invalid: :replace, undef: :replace
+      @output = xslt.transform doc
     end
   end
 end

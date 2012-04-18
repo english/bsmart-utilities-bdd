@@ -1,4 +1,3 @@
-require 'iconv'
 require 'java'
 
 $CLASSPATH << File.expand_path('../../../../lib/java/xalan.jar', __FILE__)
@@ -16,8 +15,8 @@ module Bsmart
   class JavaTransformer
     attr_reader :output
 
-    def initialize input, style
-      @input  = input
+    def initialize xml, style
+      @xml    = xml
       @style  = style
       @output = ByteArrayOutputStream.new
     end
@@ -32,12 +31,8 @@ module Bsmart
       TransformerFactory.new_instance.new_transformer StreamSource.new @style
     end
 
-    def utf8
-      File.read(@input).encode "UTF-8", "us-ascii", invalid: :replace, undef: :replace
-    end
-
     def stream_source
-      StreamSource.new StringBufferInputStream.new utf8
+      StreamSource.new StringBufferInputStream.new @xml
     end
 
     def stream_result
