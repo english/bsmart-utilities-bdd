@@ -81,7 +81,7 @@ module Bsmart
           end
         end
 
-        context "when there are products in stock with images, but not on web" do
+        context "when there are products in stock, no images, but not on web" do
           before do setup_temp_dir    end
           after  do teardown_temp_dir end
 
@@ -94,10 +94,55 @@ module Bsmart
 
             catalog.stub(:products).and_return products
             in_temp_dir do
+              FileUtils.mkdir_p '02/01'
+              FileUtils.touch '02/01/02-01-004.jpg'
+              FileUtils.touch '02/01/02-01-005.jpg'
+
+              catalog.web_candidates(web_skus, '.').should be_empty
+            end
+          end
+        end
+
+        context "when there are products in stock, with images, but not on web" do
+          before do setup_temp_dir    end
+          after  do teardown_temp_dir end
+
+          it "returns those skus" do
+            web_skus = %w{0101001 0101002}
+            products = [
+              Product.new('02-01-001', '', 1),
+              Product.new('02-01-002', '', 2)
+            ]
+
+            catalog.stub(:products).and_return products
+            in_temp_dir do
+              FileUtils.mkdir_p '02/01'
               FileUtils.touch '02/01/02-01-001.jpg'
               FileUtils.touch '02/01/02-01-002.jpg'
 
-              catalog.web_candidates(web_skus, '.').should be_empty
+              catalog.web_candidates(web_skus, '.').map(&:stock_number).should == %w{02-01-001 02-01-002}
+            end
+          end
+        end
+
+        context "when there are products in stock, with images, but not on web and --ignore-images is passed" do
+          before do setup_temp_dir    end
+          after  do teardown_temp_dir end
+
+          it "returns those skus" do
+            web_skus = %w{0101001 0101002}
+            products = [
+              Product.new('02-01-001', '', 1),
+              Product.new('02-01-002', '', 2)
+            ]
+
+            catalog.stub(:products).and_return products
+            in_temp_dir do
+              FileUtils.mkdir_p '02/01'
+              FileUtils.touch '02/01/02-01-003.jpg'
+              FileUtils.touch '02/01/02-01-004.jpg'
+
+              catalog.web_candidates(web_skus, '.', true).map(&:stock_number).should == %w{02-01-001 02-01-002}
             end
           end
         end

@@ -52,6 +52,14 @@ module Bsmart
       def in_stock?
         stock_quantity > 0
       end
+
+      def on_web? web_skus
+        web_skus.include? stock_number.gsub('-', '')
+      end
+
+      def image_exists? image_dir
+        File.exists? File.join image_dir, image
+      end
     end
   end
 end

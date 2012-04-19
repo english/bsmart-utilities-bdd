@@ -12,14 +12,25 @@ class App
   main do |xml,csv,image_dir|
     catalog = load_catalog xml
     on_web  = load_web_skus csv
-    
-    candidates = catalog.web_candidates on_web
+    image_dir ||= '.'
+
+    candidates = catalog.web_candidates on_web, image_dir, options[:ignore_images]
 
     if candidates.empty?
       puts 'Nothing!'
     else
-      candidates.each do |product| puts product.stock_number end
+      print_products candidates
     end
+  end
+
+  def self.print_products products
+    output = CSV.generate(col_sep: "\t") do |csv|
+      csv << %w{sku name}
+      products.each do |product|
+        csv << [product.stock_number, product.description]
+      end
+    end
+    puts output
   end
 
   def self.load_catalog file
@@ -47,6 +58,7 @@ class App
   #
   # Specify switches via:
   # on("--[no-]switch","Some switch")
+  on("--ignore_images")
   #
   # Or, just call OptionParser methods on opts
   #

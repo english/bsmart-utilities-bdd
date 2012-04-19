@@ -17,10 +17,16 @@ module Bsmart
         end
       end
 
-      def web_candidates web_skus
-        products.select { |product|
-          product.in_stock? and !web_skus.include? product.stock_number.gsub('-', '')
-        }
+      def web_candidates web_skus, image_dir='.', ignore_images=false
+        if ignore_images
+          products.select { |product|
+            product.in_stock? and not product.on_web?(web_skus)
+          }
+        else
+          products.select { |product|
+            product.in_stock? and product.image_exists?(image_dir) and not product.on_web?(web_skus)
+          }
+        end
       end
 
       def find_by_reference(reference)

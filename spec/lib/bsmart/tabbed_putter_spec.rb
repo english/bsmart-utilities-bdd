@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative '../../../lib/bsmart/tabbed_putter'
 
 module Bsmart
   describe TabbedPutter do

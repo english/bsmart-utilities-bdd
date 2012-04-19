@@ -32,7 +32,12 @@ module FileGenerators
   end
 
   def touch_files filenames
-    in_current_dir { FileUtils.touch filenames }
+		in_current_dir do
+			filenames.each do |filename|
+				FileUtils.mkdir_p File.dirname filename
+			end
+			FileUtils.touch filenames
+		end
   end
 end
 
