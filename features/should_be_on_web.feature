@@ -1,14 +1,40 @@
 Feature: Show stock that should be on the web
 
   Scenario: All stock already on web
-    Given a stock xml file named "catalog.xml" just with in stock items with images
-    And a csv file named "web.csv" with skus for products on the web
+    Given an xml file named "catalog.xml" with the following products:
+      | StockNum  | Reference   | Description | CurrStk | 
+      | 77-01-618 | 0008-051-14 | Heart white | 0000001 | 
+      | 77-01-619 | 0009-001-12 | Padlock     | 0000001 | 
+      | 77-01-620 | 0010-051-14 | Key         | 0000003 | 
+    And the following images
+      | image           | 
+      | 0008-051-14.jpg | 
+      | 0009-001-12.jpg | 
+      | 0010-051-14.jpg | 
+    And a csv file named "web.csv" with the following products:
+      | sku     | name        | 
+      | 7701618 | Heart white | 
+      | 7701619 | Padlock     | 
+      | 7701620 | Key         | 
     When I run `should-be-on-web catalog.xml web.csv`
     Then the output should contain exactly "Nothing!\n"
 
   Scenario: No stock on web
-    Given an xml file named "catalog.xml" with Sabo stock that have images but aren't on web
-    And a csv file named "web.csv" with skus for products on the web
+    Given an xml file named "catalog.xml" with the following products:
+      | StockNum  | Reference   | Description | CurrStk | 
+      | 77-01-618 | 0008-051-14 | Heart white | 0000001 | 
+      | 77-01-619 | 0009-001-12 | Padlock     | 0000001 | 
+      | 77-01-620 | 0010-051-14 | Key         | 0000003 | 
+    And the following images
+      | image           | 
+      | 0008-051-14.jpg | 
+      | 0009-001-12.jpg | 
+      | 0010-051-14.jpg | 
+    And a csv file named "web.csv" with the following products:
+      | sku     | name        | 
+      | 7701621 | Heart white | 
+      | 7701622 | Padlock     | 
+      | 7701623 | Key         | 
     When I run `should-be-on-web catalog.xml web.csv`
     Then the output should match the following:
       | sku     | name        | 
