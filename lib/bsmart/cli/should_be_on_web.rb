@@ -2,11 +2,10 @@ require 'ostruct'
 
 module Bsmart::CLI
   class ShouldBeOnWeb
-		IMAGE_ROOT = File.join *%w{ / Volumes bsmart Images }
-
-    def initialize catalog_xml, web_csv, switch=nil
+    def initialize catalog_xml, web_csv, image_dir='.', switch=nil
 			@catalog_xml = catalog_xml
 			@web_csv = web_csv
+			@image_dir = image_dir
       @ignore_images = switch == '--ignore-images'
     end
 
@@ -62,7 +61,7 @@ module Bsmart::CLI
 			dep = sku[0..1]
 			sub_dep = sku[2..3]
 			filename = [dep, sub_dep].join('-') + "-#{sku[4..6]}.jpg"
-			File.exists? File.join IMAGE_ROOT, dep, sub_dep, filename
+			File.exists? File.join @image_dir, dep, sub_dep, filename
 		end
 
 		def get_products_on_web
