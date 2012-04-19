@@ -25,29 +25,9 @@ Then /^the output should match the following:$/ do |table|
 end
 
 Given /^an xml file named "([^"]*)" with the following products:$/ do |filename, products_table|
-  builder = Nokogiri::XML::Builder.new do |xml|
-    xml.catalog {
-      xml.supplier {
-        products_table.hashes.each do |product|
-          xml.product {
-            product.each {|key, value| xml.send key.to_sym, value }
-          }
-        end
-      }
-    }
-  end
-  in_current_dir do
-    File.open(filename, 'wb') {|file| file.write builder.to_xml }
-  end
+  write_bsmart_catalog_xml filename, products_table.hashes
 end
 
 Given /^a csv file named "([^"]*)" with the following products:$/ do |filename, products_table|
-  in_current_dir do
-    CSV.open filename, 'wb' do |csv|
-      csv << ['sku', 'name']
-      products_table.hashes.each do |product|
-        csv << [ product[:sku], product[:name] ]
-      end
-    end
-  end
+  write_bsmart_csv filename, products_table.hashes
 end
