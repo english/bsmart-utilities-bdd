@@ -3,7 +3,7 @@ module Bsmart
     class Product
       include ROXML
 
-			attr_reader :stock_number, :reference
+			attr_accessor :stock_number, :reference, :stock_quantity
 
       xml_reader(:stock_number,     :from => 'StockNum')
       xml_reader(:margin,           :from => 'GM',       :as => Float)
@@ -17,9 +17,10 @@ module Bsmart
       xml_reader(:stock_quantity,   :from => 'CurrStk')     { |qty| qty.strip.to_i if qty }
       xml_reader(:sold_this_year,   :from => 'SoldYTD')     { |qty| qty.strip.to_i if qty }
 
-			def initialize sku=nil, reference=nil
-				@stock_number = sku
-				@reference    = reference
+			def initialize sku=nil, reference=nil, qty=nil
+				@stock_number   = sku
+				@reference      = reference
+        @stock_quantity = qty
 			end
 
       def to_s
@@ -47,6 +48,10 @@ module Bsmart
 			def image
 				"#{department}/#{sub_department}/#{stock_number}.jpg"
 			end
+
+      def in_stock?
+        stock_quantity > 0
+      end
     end
   end
 end

@@ -17,6 +17,12 @@ module Bsmart
         end
       end
 
+      def web_candidates web_skus
+        products.select { |product|
+          product.in_stock? and !web_skus.include? product.stock_number.gsub('-', '')
+        }
+      end
+
       def find_by_reference(reference)
         products.select {|product| product.reference == reference }
       end

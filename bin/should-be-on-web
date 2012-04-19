@@ -3,7 +3,7 @@ $LOAD_PATH << File.expand_path('../../lib', __FILE__)
 
 require 'optparse'
 require 'methadone'
-require_relative '../lib/bsmart'
+require 'bsmart'
 
 class App
   include Methadone::Main
@@ -13,7 +13,13 @@ class App
     catalog = load_catalog xml
     on_web  = load_web_skus csv
     
-    puts catalog.should_be_on_web image_dir
+    candidates = catalog.web_candidates on_web
+
+    if candidates.empty?
+      puts 'Nothing!'
+    else
+      candidates.each do |product| puts product.stock_number end
+    end
   end
 
   def self.load_catalog file

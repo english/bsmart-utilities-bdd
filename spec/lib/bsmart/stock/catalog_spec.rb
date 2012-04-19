@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'ostruct'
 
 module Bsmart
   module Stock
@@ -64,6 +65,21 @@ module Bsmart
       it "is printed in a nicely formatted way" do
         msg = catalog.to_s
         msg.should =~ /2 suppliers and 6 products/
+      end
+
+      describe :web_candidates do
+        context "when all products in catalog are present in web_skus" do
+          it "returns an empty array" do
+            web_skus = %w{0101001 0101002}
+            products = [
+              Product.new('01-01-001', '', 1),
+              Product.new('01-01-002', '', 2)
+            ]
+            catalog.stub(:products).and_return products
+
+            catalog.web_candidates(web_skus).should be_empty
+          end
+        end
       end
     end
   end
