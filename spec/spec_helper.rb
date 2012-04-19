@@ -1,5 +1,19 @@
 require 'bsmart'
 
+def setup_temp_dir
+	FileUtils.mkdir_p 'tmp/rspec'
+end
+
+def teardown_temp_dir
+	FileUtils.rm_rf 'tmp'
+end
+
+def in_temp_dir &block
+	Dir.chdir 'tmp/rspec' do
+		yield
+	end
+end
+
 module Helpers
   def self.sabo_catalog
     File.read File.expand_path '../../fixtures/sabo_catalog.xml', __FILE__
