@@ -1,13 +1,56 @@
 #!/usr/bin/env ruby
-
 $LOAD_PATH << File.expand_path('../../lib', __FILE__)
-require 'bsmart'
 
-catalog   = File.read ARGV.shift
-web       = File.read ARGV.shift
-image_dir = ARGV.shift or '.'
-switch    = ARGV.shift
+require 'optparse'
+require 'methadone'
+require_relative '../lib/bsmart'
 
-image_list = ImageList.new image_dir
+class App
+  include Methadone::Main
+  include Methadone::CLILogging
 
-puts Bsmart::CLI::ShouldBeOnWeb.new(catalog, web, image_list.images, switch).answer
+  main do |xml,csv,image_dir|
+    catalog = load_catalog xml
+    on_web  = load_web_skus csv
+    
+    puts catalog.should_be_on_web image_dir
+  end
+
+  def self.load_catalog file
+    Bsmart::Stock::Catalog.from_xml File.read file
+  end
+
+  def self.load_web_skus csv
+    skus = []
+    CSV.foreach csv, headers: true do |row|
+      skus << row['sku']
+    end
+
+    skus
+  end
+
+  # supplemental methods here
+
+  # Declare command-line interface here
+
+  # description "one line description of your app"
+  #
+  # Accept flags via:
+  # on("--flag VAL","Some flag")
+  # options[flag] will contain VAL
+  #
+  # Specify switches via:
+  # on("--[no-]switch","Some switch")
+  #
+  # Or, just call OptionParser methods on opts
+  #
+  # Require an argument
+  # arg :some_arg 
+  #
+  # # Make an argument optional
+  # arg :optional_arg, :optional
+
+  use_log_level_option
+
+  go!
+end

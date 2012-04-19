@@ -2,6 +2,7 @@ source :rubygems
 
 gem "roxml", "~> 3.3.1"
 gem "comma", "~> 3.0.3"
+gem "methadone", "~> 1.0.0"
 
 group :development do
   gem "cucumber",       "~> 1.1.9"

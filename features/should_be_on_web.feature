@@ -1,6 +1,6 @@
 Feature: Show stock that should be on the web
 
-  Scenario: All stock already on web
+  Scenario: All stock in the xml file is already on web
     Given an xml file named "catalog.xml" with the following products:
       | StockNum  | Reference   | Description | CurrStk | 
       | 77-01-618 | 0008-051-14 | Heart white | 0000001 | 
@@ -19,7 +19,7 @@ Feature: Show stock that should be on the web
     When I run `should-be-on-web catalog.xml web.csv`
     Then the output should contain exactly "Nothing!\n"
 
-  Scenario: Stock in stock with images but not on web
+  Scenario: Products in stock with images but not on web
     Given an xml file named "catalog.xml" with the following products:
       | StockNum  | Reference   | Description | CurrStk | 
       | 77-01-618 | 0008-051-14 | Heart white | 0000001 | 
