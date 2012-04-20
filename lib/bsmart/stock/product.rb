@@ -48,7 +48,7 @@ module Bsmart
 			end
 
 			def image
-				"#{department}/#{sub_department}/#{stock_number}.jpg"
+				File.join(department, sub_department, "#{stock_number}.jpg")
 			end
 
       def in_stock?
