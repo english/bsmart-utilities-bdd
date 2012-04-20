@@ -11,4 +11,5 @@ group :development do
   gem "guard-rspec",    "~> 0.6.0"
   gem "guard-cucumber", "~> 0.7.5"
   gem "ruby_gntp",      "~> 0.3.4"
+  gem "simplecov",      "~> 0.6.2"
 end
