@@ -1,5 +1,7 @@
 require 'fileutils'
 
+require_relative 'catalog'
+
 module Bsmart::Stock
 	class ImageCopier
 		def initialize catalog

@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
-$LOAD_PATH << File.expand_path('../../lib', __FILE__)
 
 require 'optparse'
 require 'methadone'
-require 'bsmart'
+require 'csv'
+
+require_relative '../lib/bsmart/stock/catalog'
 
 class App
   include Methadone::Main

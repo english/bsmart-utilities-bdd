@@ -1,4 +1,7 @@
 require 'spec_helper'
+require 'csv'
+
+require_relative '../../../../lib/bsmart/cli/bsmart_csv'
 
 module Bsmart::CLI
 	describe BsmartCSV do

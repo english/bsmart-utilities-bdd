@@ -1,8 +1,6 @@
 require 'simplecov'
 SimpleCov.start
 
-require 'bsmart'
-
 def setup_temp_dir
 	FileUtils.mkdir_p 'tmp/rspec'
 end

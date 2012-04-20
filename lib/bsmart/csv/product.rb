@@ -1,3 +1,6 @@
+require 'roxml'
+require 'comma'
+
 module Bsmart::CSV
   class Product
     include ROXML

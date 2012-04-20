@@ -1,3 +1,5 @@
+require 'roxml'
+
 module Bsmart
   module Stock
     class Product

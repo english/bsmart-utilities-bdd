@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+require_relative '../../../../lib/bsmart/csv/product'
+
 module Bsmart::CSV
   describe Product do
     subject { Product.from_xml Helpers.single_product_xml }

@@ -1,5 +1,8 @@
 require 'spec_helper'
 
+require_relative '../../../../lib/bsmart/stock/catalog'
+require_relative '../../../../lib/bsmart/stock/product'
+
 module Bsmart
   module Stock
     describe Product do

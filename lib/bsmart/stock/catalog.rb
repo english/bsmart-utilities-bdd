@@ -1,3 +1,6 @@
+require_relative 'supplier'
+require_relative 'product'
+
 module Bsmart
   module Stock
     class Catalog

@@ -1,5 +1,9 @@
 require 'spec_helper'
 
+require_relative '../../../../lib/bsmart/stock/catalog'
+require_relative '../../../../lib/bsmart/stock/product'
+require_relative '../../../../lib/bsmart/stock/image_copier'
+
 module Bsmart::Stock
   describe ImageCopier do
     subject do

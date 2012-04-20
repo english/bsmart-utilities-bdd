@@ -1,4 +1,6 @@
-require 'bsmart'
+require 'nokogiri'
+
+require_relative '../csv/product'
 
 module Bsmart::CLI
 	class BsmartCSV

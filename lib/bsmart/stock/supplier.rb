@@ -1,3 +1,7 @@
+require 'roxml'
+
+require_relative 'product'
+
 module Bsmart
   module Stock
     class Supplier

@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
-$LOAD_PATH << File.expand_path('../../lib', __FILE__)
-
-require 'bsmart'
+require_relative '../lib/bsmart/stock/image_copier'
+require_relative '../lib/bsmart/stock/catalog'
 
 if ARGV.first == '--help'
   puts "bsmart-copy-images <xml> <image_src> <image_dest>" 

@@ -1,5 +1,3 @@
-$LOAD_PATH << File.expand_path('../../../lib', __FILE__)
-require 'bsmart'
 require 'aruba/cucumber'
 
 if RUBY_PLATFORM == 'java'
