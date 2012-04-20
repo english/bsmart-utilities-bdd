@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-raise "usage: transform <brs_xml> <xsl>" if ARGV.size < 2
+raise "usage: transform <brs_xml>" if ARGV.size < 1
 
 shitty_xml = ARGV.shift
-xsl = ARGV.shift
+xsl = File.expand_path('../assets/stock.xsl', File.dirname(__FILE__))
 
 xml = File.read(shitty_xml).encode "UTF-8", "us-ascii", invalid: :replace, undef: :replace
 
