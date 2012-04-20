@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'bsmart'
 
 def setup_temp_dir

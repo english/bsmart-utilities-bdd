@@ -16,8 +16,5 @@ dest = ARGV.shift
 catalog = Bsmart::Stock::Catalog.from_xml File.read xml
 images = Dir.glob "#{src}/**/*.jpg"
 
-puts catalog
-puts images
-
 copier = Bsmart::Stock::ImageCopier.new catalog
 copier.copy_images images, dest
