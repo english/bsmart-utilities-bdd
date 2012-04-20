@@ -1,12 +1,12 @@
-$LOAD_PATH << File.expand_path('lib', __FILE__)
+#!/usr/bin/env rake
 
-require 'bsmart'
+require "bundler/gem_tasks"
 require 'benchmark'
 
 task :get_catalog do
   require 'iconv'
-
   require 'nokogiri'
+
   bsmart_catalog = '/Volumes/bsmart/data/DB1SC583.xml'
   utf8 = Iconv.conv("utf8//ignore//translit", "us-ascii", File.read(bsmart_catalog))
 
@@ -19,6 +19,7 @@ end
 
 task :get_catalog_java do
   require 'iconv'
+
   time = Benchmark.realtime do
     require 'java'
     $CLASSPATH << File.expand_path('../../lib/java/xalan.jar', __FILE__)
@@ -42,10 +43,4 @@ task :get_catalog_java do
   end
 
   puts time
-end
-
-task :list_stock do
-  10000.times do
-    Bsmart::CLI::ListStock.new(['assets/small-catalog.xml']).run
-  end
 end
