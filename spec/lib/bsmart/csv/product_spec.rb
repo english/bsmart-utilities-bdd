@@ -5,7 +5,17 @@ require_relative '../../../../lib/bsmart/csv/product'
 module Bsmart
   module CSV
     describe Product do
-      subject { Product.from_xml Helpers.single_product_xml }
+      subject {
+        xml = Nokogiri::XML::Builder.new { |doc|
+          doc.product {
+            doc.Reference '0008-051-14'
+            doc.StockNum  '77-01-003'
+            doc.Description 'Heart white'
+            doc.CurrStk '00000'
+          }
+        }.to_xml
+        Product.from_xml xml
+      }
 
       its(:name) { should == 'Heart white' }
       its(:sku)  { should == '77-01-003' }

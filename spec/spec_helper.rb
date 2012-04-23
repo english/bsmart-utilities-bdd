@@ -1,3 +1,5 @@
+require_relative '../features/support/file_generators'
+
 def setup_temp_dir
 	FileUtils.mkdir_p 'tmp/rspec'
 end
@@ -14,11 +16,24 @@ end
 
 module Helpers
   def self.sabo_catalog
-    File.read File.expand_path '../../fixtures/sabo_catalog.xml', __FILE__
-  end
-
-  def self.single_product_xml
-    File.read File.expand_path '../../fixtures/sabo_product.xml', __FILE__
+    products = [
+      {
+        'Reference'   => '0008-051-14', 'StockNum' => '77-01-003',
+        'Description' => 'Heart white', 'Rsp'      => '000000042.95',
+        'CurrStk'     => '0000000'
+      },
+      {
+        'Reference'   => '0009-001-12', 'StockNum' => '77-01-225',
+        'Description' => 'Padlock',     'Rsp'      => '000000029.95',
+        'CurrStk'     => '0000001'
+      },
+      {
+        'Reference'   => '0010-051-14', 'StockNum' => '77-01-004',
+        'Description' => 'Key',         'Rsp'      => '000000048.95',
+        'CurrStk'     => '0000003'
+      }
+    ]
+    FileGenerators.bsmart_catalog_xml products
   end
 
   def self.expected_csv
@@ -40,6 +55,13 @@ CSV
 	end
 
   def self.on_web_csv
-    File.read File.expand_path '../../fixtures/on_web.csv', __FILE__
+    csv = <<CSV
+sku,_store,name,_type,_category,_product_websites,brand
+7701225,,Thomas Sabo Cupid Charm,simple,Brands/Thomas Sabo,base,Thomas Sabo
+7701002,,Thomas Sabo Eternity Charm,simple,Brands/Thomas Sabo,base,Thomas Sabo
+7701004,,Thomas Sabo White Heart,simple,Brands/Thomas Sabo,base,Thomas Sabo
+7701003,,Thomas Sabo White Heart,simple,Brands/Thomas Sabo,base,Thomas Sabo
+CSV
+    csv.strip
   end
 end

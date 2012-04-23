@@ -5,28 +5,34 @@ require_relative '../../../../lib/bsmart/stock/supplier'
 require_relative '../../../../lib/bsmart/stock/product'
 
 module Bsmart
-  module Stock
-    describe Supplier do
-      let(:catalog) { Catalog.from_xml(File.read('assets/small-catalog.xml')) }
+	module Stock
+		describe Supplier do
+			subject {
+				xml = Nokogiri::XML::Builder.new { |doc|
+					doc.supplier(:name => "0001 - ACCURIST WATCHES") {
+						doc.product {
+						doc.Reference 'ITE1000'
+						doc.StockNum '35-01-026'
+						doc.Description 'Lds GP Rect MOP Set'
+						doc.Rsp '80'
+					}
+				}
+			}.to_xml
 
-      it "has a name" do
-        accurist = catalog.suppliers.first
-        accurist.name.should == 'ACCURIST WATCHES'
-      end
+			Supplier.from_xml xml
+			}
 
-      it "has a code" do
-        ted_baker = catalog.suppliers[1]
-        ted_baker.code.should == '0057'
-      end
+			it "has a name" do
+				subject.name.should == 'ACCURIST WATCHES'
+			end
 
-      it "has an array of products" do
-        accurist = catalog.suppliers.first
+			it "has a code" do
+				subject.code.should == '0001'
+			end
 
-        accurist.products.all? do |product|
-          product.class == Stock::Product
-        end.should be_true
-        accurist.products.count.should == 2
-      end
-    end
-  end
+			it "has an array of products" do
+				subject.products.count.should == 1
+			end
+		end
+	end
 end

@@ -3,7 +3,14 @@ require 'csv'
 
 module FileGenerators
   def write_bsmart_catalog_xml filename, products
-    builder = Nokogiri::XML::Builder.new do |xml|
+    xml = FileGenerators.bsmart_catalog_xml products
+    in_current_dir do
+      File.open(filename, 'wb') {|file| file.write xml }
+    end
+  end
+
+  def self.bsmart_catalog_xml products
+    Nokogiri::XML::Builder.new { |xml|
       xml.catalog {
         xml.supplier {
           products.each do |product|
@@ -13,11 +20,7 @@ module FileGenerators
           end
         }
       }
-    end
-
-    in_current_dir do
-      File.open(filename, 'wb') {|file| file.write builder.to_xml }
-    end
+    }.to_xml
   end
 
   def write_bsmart_csv filename, products
@@ -40,5 +43,3 @@ module FileGenerators
 		end
   end
 end
-
-World FileGenerators

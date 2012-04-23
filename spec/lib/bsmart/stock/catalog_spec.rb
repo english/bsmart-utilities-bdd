@@ -9,13 +9,7 @@ module Bsmart
   module Stock
     describe Catalog do
       let(:output)  { double('output') }
-      let(:catalog) { Catalog.from_xml(File.read('assets/small-catalog.xml')) }
-
-      it "uses the ROXML library" do
-        lambda do
-          Catalog.from_xml(File.read('assets/small-catalog.xml'))
-        end.should_not raise_error
-      end
+      let(:catalog) { Catalog.from_xml(Helpers.sabo_catalog) }
 
       it "holds an array of suppliers" do
         catalog.suppliers.should be_an(Array)
@@ -23,12 +17,10 @@ module Bsmart
         catalog.suppliers.all? do |supplier|
           supplier.class == Stock::Supplier
         end.should be_true
-
-        catalog.suppliers.count.should == 2
       end
 
       it "returns an array of all products in the catalog" do
-        catalog.products.count.should == 6
+        catalog.products.count.should == 3
         catalog.products.sample.should be_a(Product)
       end
 
@@ -36,39 +28,32 @@ module Bsmart
         duplicates = catalog.duplicate_products
 
         duplicates.should be_an(Array)
-        duplicates.count.should == 2
-        duplicates.all? { |product| product.reference == 'ITE1005' }
+        duplicates.count.should == 0
+        #duplicates.all? { |product| product.reference == 'ITE1005' }
       end
 
       it "counts products" do
         catalog.counted_products.should == {
-          '3501000'   => 1,
-          'A2-24126A' => 1,
-          'ITE1001'   => 1,
-          'ITE1003'   => 1,
-          'ITE1005'   => 2
+          '0008-051-14' => 1,
+          '0009-001-12' => 1,
+          '0010-051-14' => 1
         }
       end
 
       it "finds duplicate references" do
-        catalog.duplicate_references.should == ['ITE1005']
+        catalog.duplicate_references.should == []
       end
 
       it "finds products by reference" do
-        matches = catalog.find_by_reference('ITE1005')
+        matches = catalog.find_by_reference('0010-051-14')
 
-        matches.count.should == 2
-        matches.all? { |product| product.reference == 'ITE1005' }
-      end
-
-      it "can be printed" do
-        catalog.should_receive(:to_s)
-        puts catalog
+        matches.count.should == 1
+        matches.all? { |product| product.reference == '0010-051-14' }
       end
 
       it "is printed in a nicely formatted way" do
         msg = catalog.to_s
-        msg.should =~ /2 suppliers and 6 products/
+        msg.should =~ /1 suppliers and 3 products/
       end
 
       describe :web_candidates do
