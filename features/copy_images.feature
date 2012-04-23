@@ -1,7 +1,7 @@
 Feature: Copy images to bsmart directory that aren't already there
 
   Scenario: App runs
-    When I run `jruby ../../bin/bsmart-copy-images --help`
+    When I run `bsmart-copy-images --help`
     Then the output should contain "bsmart-copy-images <xml> <image_src> <image_dest>"
 
   Scenario: bsmart-copy-images <xml> <image_src> <image_dest>
