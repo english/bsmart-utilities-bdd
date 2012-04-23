@@ -1,6 +1,3 @@
-require 'simplecov'
-SimpleCov.start
-
 def setup_temp_dir
 	FileUtils.mkdir_p 'tmp/rspec'
 end
