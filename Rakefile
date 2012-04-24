@@ -44,3 +44,10 @@ task :get_catalog_java do
 
   puts time
 end
+
+task :expand do
+  `git ls-files`.split.each do |file|
+    spaced = `expand #{file}`
+    File.open(file, 'w') { |f| f.write(spaced) }
+  end
+end
