@@ -3,10 +3,10 @@ require 'fileutils'
 require_relative 'catalog'
 
 module Bsmart::Stock
-	class ImageCopier
-		def initialize catalog
+  class ImageCopier
+    def initialize catalog
       @catalog = catalog
-		end
+    end
 
     def copy_images images, dest_prefix
       @catalog.products.each do |product|
@@ -29,5 +29,5 @@ module Bsmart::Stock
     def make_way_for filename
       FileUtils.mkdir_p File.dirname filename
     end
-	end
+  end
 end

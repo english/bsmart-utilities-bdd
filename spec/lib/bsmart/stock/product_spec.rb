@@ -7,16 +7,16 @@ module Bsmart
   module Stock
     describe Product do
       subject {
-				xml = Nokogiri::XML::Builder.new { |doc|
-					doc.product {
-						doc.Reference 'ITE1000'
-						doc.StockNum '35-01-026'
-						doc.Description 'Lds GP Rect MOP Set'
-						doc.Rsp '80'
-					}
-				}.to_xml
-				Product.from_xml xml
-			}
+        xml = Nokogiri::XML::Builder.new { |doc|
+          doc.product {
+            doc.Reference 'ITE1000'
+            doc.StockNum '35-01-026'
+            doc.Description 'Lds GP Rect MOP Set'
+            doc.Rsp '80'
+          }
+        }.to_xml
+        Product.from_xml xml
+      }
 
       it "has a reference" do
         subject.reference.should == 'ITE1000'

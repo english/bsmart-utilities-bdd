@@ -6,13 +6,13 @@ module Bsmart
     class Catalog
       include ROXML
 
-			attr_accessor :suppliers
+      attr_accessor :suppliers
 
       xml_accessor :suppliers, :as => [Supplier]
 
-			def initialize suppliers=nil
-				@suppliers = Array(suppliers)
-			end
+      def initialize suppliers=nil
+        @suppliers = Array(suppliers)
+      end
 
       def products
         suppliers.inject([]) do |products, supplier|

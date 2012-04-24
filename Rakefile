@@ -39,7 +39,7 @@ task :get_catalog_java do
     transformer_factory = TransformerFactory.new_instance
     transformer = transformer_factory.new_transformer(StreamSource.new('assets/stock.xsl'))
     transformer.transform(StreamSource.new(StringBufferInputStream.new(utf8)),
-      StreamResult.new(FileOutputStream.new('assets/catalog.xml')))
+                          StreamResult.new(FileOutputStream.new('assets/catalog.xml')))
   end
 
   puts time
@@ -47,7 +47,9 @@ end
 
 task :expand do
   `git ls-files`.split.each do |file|
-    spaced = `expand #{file}`
-    File.open(file, 'w') { |f| f.write(spaced) }
+    unless %w(.jar .lock).include? File.extname(file)
+      spaced = `expand -t 2 #{file}`
+      File.open(file, 'w') { |f| f.write(spaced) }
+    end
   end
 end

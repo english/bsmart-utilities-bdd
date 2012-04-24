@@ -15,25 +15,25 @@ module Bsmart::Stock
       ImageCopier.new catalog
     end
 
-		describe :find_image do
-			context "image filename exactly matching reference" do
-				it "finds the image for a product" do
-					images = [ '001-001-12.jpg' ]
-					product = Product.new '77-01-001', '001-001-12'
-					image = subject.find_image images, product
-					image.should == '001-001-12.jpg'
-				end
-			end
+    describe :find_image do
+      context "image filename exactly matching reference" do
+        it "finds the image for a product" do
+          images = [ '001-001-12.jpg' ]
+          product = Product.new '77-01-001', '001-001-12'
+          image = subject.find_image images, product
+          image.should == '001-001-12.jpg'
+        end
+      end
 
-			context "begining of image filename matches reference" do
-				it "finds the image for a product" do
-					images = [ '001-001-12_blabla.jpg' ]
-					product = Product.new '77-01-001', '001-001-12'
-					image = subject.find_image images, product
-					image.should == '001-001-12_blabla.jpg'
-				end
-			end
-		end
+      context "begining of image filename matches reference" do
+        it "finds the image for a product" do
+          images = [ '001-001-12_blabla.jpg' ]
+          product = Product.new '77-01-001', '001-001-12'
+          image = subject.find_image images, product
+          image.should == '001-001-12_blabla.jpg'
+        end
+      end
+    end
 
     it "creates the required directories for an image" do
       FileUtils.should_receive(:mkdir_p).with 'dest/01/01'

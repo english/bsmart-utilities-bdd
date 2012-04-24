@@ -3,15 +3,15 @@ require 'nokogiri'
 require_relative '../csv/product'
 
 module Bsmart::CLI
-	class BsmartCSV
-		def initialize input, output
+  class BsmartCSV
+    def initialize input, output
       @input = input
       @output = output
-		end
+    end
 
-		def run
+    def run
       io << products.to_comma
-		end
+    end
 
     def io
       @io ||= File.new @output, 'wb'
@@ -23,5 +23,5 @@ module Bsmart::CLI
         Bsmart::CSV::Product.from_xml product_xml
       end
     end
-	end
+  end
 end
