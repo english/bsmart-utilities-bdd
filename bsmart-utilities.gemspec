@@ -25,6 +25,7 @@ SUMMARY
   gem.add_dependency("comma", "~> 3.0.3")
   gem.add_dependency("methadone", "~> 1.0.0")
 
+  gem.add_development_dependency("rake")
   gem.add_development_dependency("cucumber", "~> 1.1.9")
   gem.add_development_dependency("rspec", "~> 2.8.0")
   gem.add_development_dependency("aruba", "~> 0.4.11")

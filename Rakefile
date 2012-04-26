@@ -2,6 +2,7 @@
 
 require "bundler/gem_tasks"
 require 'benchmark'
+require 'reek/rake/task'
 
 task :get_catalog do
   require 'iconv'
@@ -52,4 +53,8 @@ task :expand do
       File.open(file, 'w') { |f| f.write(spaced) }
     end
   end
+end
+
+Reek::Rake::Task.new do |t|
+  t.source_files = FileList.new('lib/**/*.rb')
 end
