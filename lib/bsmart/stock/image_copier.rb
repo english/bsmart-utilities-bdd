@@ -11,14 +11,18 @@ module Bsmart::Stock
     def copy_images images, dest_prefix
       @catalog.products.each do |product|
         puts "checking for #{product.stock_number}"
-        src = find_image images, product
-        if src
-          dest = File.join dest_prefix, product.image
-          puts 'src: ' + src
-          puts 'dest: ' + dest
-          make_way_for dest
-          FileUtils.copy src, dest
-        end
+        copy_image dest_prefix, product, images
+      end
+    end
+
+    def copy_image dest_prefix, product, images
+      src = find_image images, product
+      if src
+        dest = File.join dest_prefix, product.image
+        puts 'src: ' + src
+        puts 'dest: ' + dest
+        make_way_for dest
+        FileUtils.copy src, dest
       end
     end
 
